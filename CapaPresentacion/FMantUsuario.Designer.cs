@@ -31,21 +31,21 @@ namespace CapaPresentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMantUsuario));
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbIdUsuario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbClave = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cbRol = new System.Windows.Forms.ComboBox();
-            this.cbEmpleado = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.cbIdRol = new System.Windows.Forms.ComboBox();
+            this.cbIdEmpleado = new System.Windows.Forms.ComboBox();
             this.bBuscar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -72,13 +72,13 @@ namespace CapaPresentacion
             this.label8.TabIndex = 43;
             this.label8.Text = "Estado";
             // 
-            // textBox6
+            // tbIdUsuario
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(22, 121);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(531, 44);
-            this.textBox6.TabIndex = 41;
+            this.tbIdUsuario.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdUsuario.Location = new System.Drawing.Point(22, 121);
+            this.tbIdUsuario.Name = "tbIdUsuario";
+            this.tbIdUsuario.Size = new System.Drawing.Size(531, 44);
+            this.tbIdUsuario.TabIndex = 41;
             // 
             // label7
             // 
@@ -110,13 +110,13 @@ namespace CapaPresentacion
             this.label5.TabIndex = 34;
             this.label5.Text = "Empleado";
             // 
-            // textBox3
+            // tbClave
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(20, 319);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(531, 44);
-            this.textBox3.TabIndex = 33;
+            this.tbClave.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbClave.Location = new System.Drawing.Point(20, 319);
+            this.tbClave.Name = "tbClave";
+            this.tbClave.Size = new System.Drawing.Size(531, 44);
+            this.tbClave.TabIndex = 33;
             // 
             // label4
             // 
@@ -140,13 +140,13 @@ namespace CapaPresentacion
             this.panel2.Size = new System.Drawing.Size(1890, 5);
             this.panel2.TabIndex = 29;
             // 
-            // textBox1
+            // tbUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(21, 233);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(531, 44);
-            this.textBox1.TabIndex = 27;
+            this.tbUsuario.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Location = new System.Drawing.Point(21, 233);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(531, 44);
+            this.tbUsuario.TabIndex = 27;
             // 
             // label2
             // 
@@ -191,39 +191,39 @@ namespace CapaPresentacion
             this.panel1.Size = new System.Drawing.Size(1681, 69);
             this.panel1.TabIndex = 6;
             // 
-            // comboBox1
+            // cbEstado
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.comboBox1.Location = new System.Drawing.Point(20, 552);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(531, 44);
-            this.comboBox1.TabIndex = 44;
+            this.cbEstado.Location = new System.Drawing.Point(20, 552);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbEstado.Size = new System.Drawing.Size(531, 44);
+            this.cbEstado.TabIndex = 44;
             // 
-            // cbRol
+            // cbIdRol
             // 
-            this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(23, 473);
-            this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(530, 45);
-            this.cbRol.TabIndex = 45;
+            this.cbIdRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIdRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIdRol.FormattingEnabled = true;
+            this.cbIdRol.Location = new System.Drawing.Point(23, 473);
+            this.cbIdRol.Name = "cbIdRol";
+            this.cbIdRol.Size = new System.Drawing.Size(530, 45);
+            this.cbIdRol.TabIndex = 45;
             // 
-            // cbEmpleado
+            // cbIdEmpleado
             // 
-            this.cbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmpleado.FormattingEnabled = true;
-            this.cbEmpleado.Location = new System.Drawing.Point(23, 396);
-            this.cbEmpleado.Name = "cbEmpleado";
-            this.cbEmpleado.Size = new System.Drawing.Size(530, 45);
-            this.cbEmpleado.TabIndex = 46;
+            this.cbIdEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIdEmpleado.FormattingEnabled = true;
+            this.cbIdEmpleado.Location = new System.Drawing.Point(23, 396);
+            this.cbIdEmpleado.Name = "cbIdEmpleado";
+            this.cbIdEmpleado.Size = new System.Drawing.Size(530, 45);
+            this.cbIdEmpleado.TabIndex = 46;
             // 
             // bBuscar
             // 
@@ -238,6 +238,7 @@ namespace CapaPresentacion
             this.bBuscar.Text = "Buscar  ";
             this.bBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscar.UseVisualStyleBackColor = true;
+            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
             // 
             // panel4
             // 
@@ -307,6 +308,7 @@ namespace CapaPresentacion
             this.bmenu.Text = "Salir";
             this.bmenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bmenu.UseVisualStyleBackColor = true;
+            this.bmenu.Click += new System.EventHandler(this.bmenu_Click);
             // 
             // bCancelar
             // 
@@ -321,6 +323,7 @@ namespace CapaPresentacion
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // bEditar
             // 
@@ -335,6 +338,7 @@ namespace CapaPresentacion
             this.bEditar.Text = "Editar";
             this.bEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bEditar.UseVisualStyleBackColor = true;
+            this.bEditar.Click += new System.EventHandler(this.bEditar_Click);
             // 
             // bGuardar
             // 
@@ -349,6 +353,7 @@ namespace CapaPresentacion
             this.bGuardar.Text = "Guardar";
             this.bGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bGuardar.UseVisualStyleBackColor = true;
+            this.bGuardar.Click += new System.EventHandler(this.bGuardar_Click);
             // 
             // bAgregar
             // 
@@ -365,6 +370,7 @@ namespace CapaPresentacion
             this.bAgregar.Text = "Agregar";
             this.bAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // FMantUsuario
             // 
@@ -376,20 +382,20 @@ namespace CapaPresentacion
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbRol);
+            this.Controls.Add(this.cbIdRol);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbIdUsuario);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbClave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PTitulo);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cbEmpleado);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.cbIdEmpleado);
             this.Name = "FMantUsuario";
             this.Text = "FMantUsuario";
             this.Load += new System.EventHandler(this.FMantUsuario_Load);
@@ -405,21 +411,21 @@ namespace CapaPresentacion
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbIdUsuario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbClave;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PTitulo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cbRol;
-        private System.Windows.Forms.ComboBox cbEmpleado;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.ComboBox cbIdRol;
+        private System.Windows.Forms.ComboBox cbIdEmpleado;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ToolStrip toolStrip1;

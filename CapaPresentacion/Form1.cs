@@ -27,13 +27,17 @@ namespace CapaPresentacion
         {
             childform.Close();
             childform = null;
-            panelDesktop.Visible = false;
+            this.Close();
         }
 
         private void openChildForm(Form childForm)
         {
+            if (currentChildForm != null && currentChildForm.GetType() == childForm.GetType())
+            {
+                currentChildForm.BringToFront();
+                return;
+            }
             currentChildForm = childForm;
-
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -66,7 +70,8 @@ namespace CapaPresentacion
 
         private void FMenu_Load(object sender, EventArgs e)
         {
-
+            panelDesktop.Visible = false;
+            //this.BackgroundImage = 
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
@@ -114,8 +119,8 @@ namespace CapaPresentacion
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FMenu menu = new FMenu();
-            openChildForm(new FMantVehiculo(menu));
+                FMenu menu = new FMenu();
+                openChildForm(new FMantVehiculo(menu));
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,7 +165,12 @@ namespace CapaPresentacion
 
         private void datosGeneralesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new FConsVehiculo());
+            openChildForm(new FConsVehiculo()); 
+        }
+
+        private void salidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace CapaNegocios
 {
     public class CNUsuario
     {
-        public static string Insertar(int pIdEmpleado, int pIdUsuario, string pClave, string pUsuario, int pIdRol, string pEstado)
+        public static string Insertar(int pIdUsuario, string pUsuario, string pClave, int pIdEmpleado, int pIdRol, string pEstado)
         {
             CDUsuario objUsuario = new CDUsuario();
             objUsuario.IdUsuario = pIdUsuario;
@@ -25,7 +25,7 @@ namespace CapaNegocios
             return objUsuario.Insertar(objUsuario);
         }
 
-        public static string Actualizar(int pIdEmpleado, int pIdUsuario, string pClave, string pUsuario, int pIdRol, string pEstado)
+        public static string Actualizar(int pIdUsuario, string pUsuario, string pClave, int pIdEmpleado, int pIdRol, string pEstado)
         {
             CDUsuario objUsuario = new CDUsuario();
             objUsuario.IdUsuario = pIdUsuario;

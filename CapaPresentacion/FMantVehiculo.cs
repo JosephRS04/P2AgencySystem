@@ -68,7 +68,7 @@ namespace CapaPresentacion
                 HabilitaControles(true);
                 bAgregar.Enabled = false;
                 bGuardar.Enabled = true;
-                bEditar.Enabled = false;
+                bEditar.Enabled = true;
                 bBuscar.Enabled = false;
                 bCancelar.Enabled = true;
             }
@@ -93,8 +93,7 @@ namespace CapaPresentacion
 
         private void bmenu_Click(object sender, EventArgs e)
         {
-            FMenu menu = new FMenu();
-            menu.closechildform(this);
+            this.Close();
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -148,7 +147,7 @@ namespace CapaPresentacion
             fBuscarVehiculo.ShowDialog(); 
             if (Program.modificar)
             {
-                RecuperaDatos();  //Llamo al método para recuperar el Depto seleccionado 
+                RecuperaDatos(); //Llamo al método para recuperar el Depto seleccionado 
                 bEditar_Click(sender, e);  //Llamo al método editar 
             }
             else
@@ -190,6 +189,11 @@ namespace CapaPresentacion
         }
 
         private void tbIdVehiculo_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FMantVehiculo_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

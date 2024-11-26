@@ -248,7 +248,7 @@ namespace CapaPresentacion
             this.porPrecioToolStripMenuItem});
             this.vehiculosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vehiculosToolStripMenuItem.Image")));
             this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
-            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
             this.vehiculosToolStripMenuItem.Text = "Vehiculos";
             // 
             // datosGeneralesToolStripMenuItem
@@ -321,7 +321,7 @@ namespace CapaPresentacion
             this.porTeléfonoToolStripMenuItem});
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // datosGeneralesToolStripMenuItem1
@@ -373,7 +373,7 @@ namespace CapaPresentacion
             this.porRolToolStripMenuItem});
             this.empleadoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("empleadoToolStripMenuItem1.Image")));
             this.empleadoToolStripMenuItem1.Name = "empleadoToolStripMenuItem1";
-            this.empleadoToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.empleadoToolStripMenuItem1.Size = new System.Drawing.Size(194, 34);
             this.empleadoToolStripMenuItem1.Text = "Empleado";
             // 
             // datosGeneralesToolStripMenuItem2
@@ -428,7 +428,7 @@ namespace CapaPresentacion
             this.nombreDeUsuarioToolStripMenuItem});
             this.uusariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("uusariosToolStripMenuItem.Image")));
             this.uusariosToolStripMenuItem.Name = "uusariosToolStripMenuItem";
-            this.uusariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.uusariosToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
             this.uusariosToolStripMenuItem.Text = "Usuarios";
             // 
             // datosGeneralesToolStripMenuItem3
@@ -468,7 +468,7 @@ namespace CapaPresentacion
             this.porCondiciónToolStripMenuItem});
             this.ventasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ventasToolStripMenuItem.Image")));
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // datosGeneralesToolStripMenuItem4
@@ -644,13 +644,14 @@ namespace CapaPresentacion
             this.salidaToolStripMenuItem.Name = "salidaToolStripMenuItem";
             this.salidaToolStripMenuItem.Size = new System.Drawing.Size(75, 36);
             this.salidaToolStripMenuItem.Text = "Salida";
+            this.salidaToolStripMenuItem.Click += new System.EventHandler(this.salidaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(212, 34);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.ToolTipText = "Salir del sistema";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);

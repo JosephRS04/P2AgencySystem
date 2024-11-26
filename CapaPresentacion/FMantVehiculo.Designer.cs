@@ -507,6 +507,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.tbIdVehiculo);
             this.Name = "FMantVehiculo";
             this.Text = "FMantVehiculo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMantVehiculo_FormClosing);
             this.Load += new System.EventHandler(this.FMantVehiculo_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FMantVehiculo_KeyDown);
             this.toolStrip1.ResumeLayout(false);

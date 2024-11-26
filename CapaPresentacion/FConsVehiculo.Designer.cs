@@ -32,6 +32,7 @@ namespace CapaPresentacion
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConsVehiculo));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.LCantVehiculo = new System.Windows.Forms.Label();
             this.bImprimir = new System.Windows.Forms.Button();
             this.bSalir = new System.Windows.Forms.Button();
             this.bUltimo = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.PTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LCantVehiculo = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel5.SuspendLayout();
@@ -83,6 +83,17 @@ namespace CapaPresentacion
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1695, 83);
             this.panel3.TabIndex = 60;
+            // 
+            // LCantVehiculo
+            // 
+            this.LCantVehiculo.AutoSize = true;
+            this.LCantVehiculo.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LCantVehiculo.ForeColor = System.Drawing.Color.Black;
+            this.LCantVehiculo.Location = new System.Drawing.Point(803, 28);
+            this.LCantVehiculo.Name = "LCantVehiculo";
+            this.LCantVehiculo.Size = new System.Drawing.Size(416, 45);
+            this.LCantVehiculo.TabIndex = 7;
+            this.LCantVehiculo.Text = "Cantidad de vehiculos: ";
             // 
             // bImprimir
             // 
@@ -226,6 +237,7 @@ namespace CapaPresentacion
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(559, 53);
             this.tbBuscar.TabIndex = 1;
+            this.tbBuscar.TextChanged += new System.EventHandler(this.bBuscar_Click);
             // 
             // label3
             // 
@@ -282,17 +294,6 @@ namespace CapaPresentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1695, 69);
             this.panel1.TabIndex = 6;
-            // 
-            // LCantVehiculo
-            // 
-            this.LCantVehiculo.AutoSize = true;
-            this.LCantVehiculo.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LCantVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.LCantVehiculo.Location = new System.Drawing.Point(803, 28);
-            this.LCantVehiculo.Name = "LCantVehiculo";
-            this.LCantVehiculo.Size = new System.Drawing.Size(416, 45);
-            this.LCantVehiculo.TabIndex = 7;
-            this.LCantVehiculo.Text = "Cantidad de vehiculos: ";
             // 
             // FConsVehiculo
             // 
