@@ -42,11 +42,11 @@ namespace CapaPresentacion
             this.panel5 = new System.Windows.Forms.Panel();
             this.bBuscar = new System.Windows.Forms.Button();
             this.tbBuscar = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel5.SuspendLayout();
@@ -197,7 +197,7 @@ namespace CapaPresentacion
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.bBuscar);
             this.panel5.Controls.Add(this.tbBuscar);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.ForeColor = System.Drawing.Color.Coral;
             this.panel5.Location = new System.Drawing.Point(0, 69);
@@ -229,19 +229,6 @@ namespace CapaPresentacion
             this.tbBuscar.Size = new System.Drawing.Size(559, 53);
             this.tbBuscar.TabIndex = 1;
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(237, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 46);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Ingrese el dato a buscar";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel2
             // 
@@ -292,6 +279,17 @@ namespace CapaPresentacion
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Snow;
+            this.label3.Location = new System.Drawing.Point(229, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(424, 45);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Ingrese el dato a buscar";
+            // 
             // FConsCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -330,10 +328,10 @@ namespace CapaPresentacion
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.TextBox tbBuscar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PTitulo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }

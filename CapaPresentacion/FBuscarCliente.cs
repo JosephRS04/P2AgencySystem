@@ -74,7 +74,7 @@ namespace CapaPresentacion
             {
                 indice = indice - 1;
                 DGVDatos.CurrentCell =
-                                                   DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
+                DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
             }
         }
 
@@ -85,15 +85,6 @@ namespace CapaPresentacion
                 indice = 0;
                 DGVDatos.CurrentCell = DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
             }
-        }
-
-        private void DGVDatos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (!(e.RowIndex > -1))
-            {
-                return;
-            }
-            bAceptar_Click(sender, e);
         }
 
         private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
@@ -125,6 +116,15 @@ namespace CapaPresentacion
         private void tbBuscar_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void DGVDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!(e.RowIndex > -1))
+            {
+                return;
+            }
+            bAceptar_Click(sender, e);
         }
 
         private void MostrarDatos()

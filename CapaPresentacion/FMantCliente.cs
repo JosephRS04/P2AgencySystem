@@ -107,8 +107,8 @@ namespace CapaPresentacion
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-            FBuscarCliente fBuscarSuplidor = new FBuscarCliente();
-            fBuscarSuplidor.ShowDialog();
+            FBuscarCliente fBuscarCliente = new FBuscarCliente();
+            fBuscarCliente.ShowDialog();
             if (Program.modificar)      //Si se está en modo de edición 
             {
                 RecuperaDatos();  //Llamo al método para recuperar el registro seleccionado 

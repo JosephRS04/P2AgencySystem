@@ -32,9 +32,9 @@ namespace CapaPresentacion
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBuscarVehiculo));
             this.DGVDatos = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.bBuscar = new System.Windows.Forms.Button();
             this.tbBuscar = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bBuscar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,20 +64,41 @@ namespace CapaPresentacion
             this.DGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVDatos.Size = new System.Drawing.Size(1693, 790);
             this.DGVDatos.TabIndex = 80;
+            this.DGVDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDatos_CellContentClick);
+            this.DGVDatos.CurrentCellChanged += new System.EventHandler(this.DGVDatos_CurrentCellChanged);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.bBuscar);
             this.panel5.Controls.Add(this.tbBuscar);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.bBuscar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.ForeColor = System.Drawing.Color.Coral;
             this.panel5.Location = new System.Drawing.Point(0, 69);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1693, 69);
             this.panel5.TabIndex = 79;
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBuscar.Location = new System.Drawing.Point(533, 11);
+            this.tbBuscar.Name = "tbBuscar";
+            this.tbBuscar.Size = new System.Drawing.Size(559, 53);
+            this.tbBuscar.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Snow;
+            this.label3.Location = new System.Drawing.Point(99, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(424, 45);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Ingrese el dato a buscar";
             // 
             // bBuscar
             // 
@@ -92,26 +113,7 @@ namespace CapaPresentacion
             this.bBuscar.Text = "Buscar Dato   ";
             this.bBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscar.UseVisualStyleBackColor = true;
-            // 
-            // tbBuscar
-            // 
-            this.tbBuscar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBuscar.Location = new System.Drawing.Point(533, 11);
-            this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(559, 53);
-            this.tbBuscar.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(237, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 46);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Ingrese el dato a buscar";
+            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
             // 
             // panel6
             // 
@@ -143,9 +145,9 @@ namespace CapaPresentacion
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(13, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(618, 60);
+            this.label2.Size = new System.Drawing.Size(425, 60);
             this.label2.TabIndex = 76;
-            this.label2.Text = "Consulta General de clientes";
+            this.label2.Text = "Busqueda Vehiculo";
             // 
             // PTitulo
             // 
@@ -175,6 +177,7 @@ namespace CapaPresentacion
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // bAceptar
             // 
@@ -189,6 +192,7 @@ namespace CapaPresentacion
             this.bAceptar.Text = "Aceptar";
             this.bAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAceptar.UseVisualStyleBackColor = true;
+            this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
             // 
             // bUltimo
             // 
@@ -203,6 +207,7 @@ namespace CapaPresentacion
             this.bUltimo.Text = "Ultimo";
             this.bUltimo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bUltimo.UseVisualStyleBackColor = true;
+            this.bUltimo.Click += new System.EventHandler(this.bUltimo_Click);
             // 
             // bSiguiente
             // 
@@ -217,6 +222,7 @@ namespace CapaPresentacion
             this.bSiguiente.Text = "Siguiente";
             this.bSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bSiguiente.UseVisualStyleBackColor = true;
+            this.bSiguiente.Click += new System.EventHandler(this.bSiguiente_Click);
             // 
             // bAnterior
             // 
@@ -231,6 +237,7 @@ namespace CapaPresentacion
             this.bAnterior.Text = "Anterior";
             this.bAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAnterior.UseVisualStyleBackColor = true;
+            this.bAnterior.Click += new System.EventHandler(this.bAnterior_Click);
             // 
             // bPrimero
             // 
@@ -247,6 +254,7 @@ namespace CapaPresentacion
             this.bPrimero.Text = "Primero";
             this.bPrimero.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bPrimero.UseVisualStyleBackColor = true;
+            this.bPrimero.Click += new System.EventHandler(this.bPrimero_Click);
             // 
             // panel1
             // 
@@ -275,6 +283,7 @@ namespace CapaPresentacion
             this.Name = "FBuscarVehiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FBuscarVehiculo";
+            this.Load += new System.EventHandler(this.FBuscarVehiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -290,7 +299,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.TextBox tbBuscar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
@@ -302,5 +310,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button bAnterior;
         private System.Windows.Forms.Button bPrimero;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }

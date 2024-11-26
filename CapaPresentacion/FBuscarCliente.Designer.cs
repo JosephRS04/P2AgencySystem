@@ -46,9 +46,9 @@ namespace CapaPresentacion
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.bBuscar = new System.Windows.Forms.Button();
             this.tbBuscar = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bBuscar = new System.Windows.Forms.Button();
             this.DGVDatos = new System.Windows.Forms.DataGridView();
             this.PTitulo.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -254,38 +254,23 @@ namespace CapaPresentacion
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(13, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(618, 60);
+            this.label2.Size = new System.Drawing.Size(392, 60);
             this.label2.TabIndex = 62;
-            this.label2.Text = "Consulta General de clientes";
+            this.label2.Text = "Busqueda Cliente";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.bBuscar);
             this.panel5.Controls.Add(this.tbBuscar);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.bBuscar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.ForeColor = System.Drawing.Color.Coral;
             this.panel5.Location = new System.Drawing.Point(0, 69);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1698, 69);
             this.panel5.TabIndex = 67;
-            // 
-            // bBuscar
-            // 
-            this.bBuscar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bBuscar.Image = ((System.Drawing.Image)(resources.GetObject("bBuscar.Image")));
-            this.bBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bBuscar.Location = new System.Drawing.Point(1105, -1);
-            this.bBuscar.Name = "bBuscar";
-            this.bBuscar.Size = new System.Drawing.Size(245, 62);
-            this.bBuscar.TabIndex = 49;
-            this.bBuscar.Text = "Buscar Dato   ";
-            this.bBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bBuscar.UseVisualStyleBackColor = true;
-            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
             // 
             // tbBuscar
             // 
@@ -296,17 +281,31 @@ namespace CapaPresentacion
             this.tbBuscar.TabIndex = 1;
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged_1);
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(237, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 46);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Ingrese el dato a buscar";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Snow;
+            this.label3.Location = new System.Drawing.Point(100, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(424, 45);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Ingrese el dato a buscar";
+            // 
+            // bBuscar
+            // 
+            this.bBuscar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bBuscar.Image = ((System.Drawing.Image)(resources.GetObject("bBuscar.Image")));
+            this.bBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bBuscar.Location = new System.Drawing.Point(1105, -1);
+            this.bBuscar.Name = "bBuscar";
+            this.bBuscar.Size = new System.Drawing.Size(317, 62);
+            this.bBuscar.TabIndex = 49;
+            this.bBuscar.Text = "Buscar Dato";
+            this.bBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bBuscar.UseVisualStyleBackColor = true;
+            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
             // 
             // DGVDatos
             // 
@@ -321,6 +320,7 @@ namespace CapaPresentacion
             this.DGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVDatos.Size = new System.Drawing.Size(1698, 785);
             this.DGVDatos.TabIndex = 70;
+            this.DGVDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDatos_CellContentClick);
             // 
             // FBuscarCliente
             // 
@@ -372,7 +372,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.TextBox tbBuscar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView DGVDatos;
+        private System.Windows.Forms.Label label3;
     }
 }
