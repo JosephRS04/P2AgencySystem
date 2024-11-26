@@ -31,24 +31,24 @@ namespace CapaPresentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMantEmpleado));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbIdEmpleado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbTelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbApellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbRol = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbIdRol = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.bBuscar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -73,13 +73,13 @@ namespace CapaPresentacion
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Empleado";
             // 
-            // textBox6
+            // tbIdEmpleado
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(22, 121);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(531, 44);
-            this.textBox6.TabIndex = 38;
+            this.tbIdEmpleado.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdEmpleado.Location = new System.Drawing.Point(22, 121);
+            this.tbIdEmpleado.Name = "tbIdEmpleado";
+            this.tbIdEmpleado.Size = new System.Drawing.Size(531, 44);
+            this.tbIdEmpleado.TabIndex = 38;
             // 
             // label7
             // 
@@ -111,13 +111,13 @@ namespace CapaPresentacion
             this.label5.TabIndex = 31;
             this.label5.Text = "Fecha de nacimiento";
             // 
-            // textBox3
+            // tbTelefono
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(20, 319);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(531, 44);
-            this.textBox3.TabIndex = 30;
+            this.tbTelefono.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTelefono.Location = new System.Drawing.Point(20, 319);
+            this.tbTelefono.Name = "tbTelefono";
+            this.tbTelefono.Size = new System.Drawing.Size(531, 44);
+            this.tbTelefono.TabIndex = 30;
             // 
             // label4
             // 
@@ -129,13 +129,13 @@ namespace CapaPresentacion
             this.label4.TabIndex = 29;
             this.label4.Text = "Teléfono";
             // 
-            // textBox2
+            // tbApellido
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(651, 233);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(531, 44);
-            this.textBox2.TabIndex = 28;
+            this.tbApellido.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbApellido.Location = new System.Drawing.Point(651, 233);
+            this.tbApellido.Name = "tbApellido";
+            this.tbApellido.Size = new System.Drawing.Size(531, 44);
+            this.tbApellido.TabIndex = 28;
             // 
             // label3
             // 
@@ -159,13 +159,13 @@ namespace CapaPresentacion
             this.panel2.Size = new System.Drawing.Size(1690, 5);
             this.panel2.TabIndex = 26;
             // 
-            // textBox7
+            // tbNombre
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(21, 233);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(531, 44);
-            this.textBox7.TabIndex = 24;
+            this.tbNombre.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombre.Location = new System.Drawing.Point(21, 233);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(531, 44);
+            this.tbNombre.TabIndex = 24;
             // 
             // label2
             // 
@@ -220,38 +220,38 @@ namespace CapaPresentacion
             this.label8.TabIndex = 40;
             this.label8.Text = "Estado";
             // 
-            // cbRol
+            // tbIdRol
             // 
-            this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(20, 478);
-            this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(528, 45);
-            this.cbRol.TabIndex = 42;
-            this.cbRol.SelectedIndexChanged += new System.EventHandler(this.cbRol_SelectedIndexChanged);
+            this.tbIdRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbIdRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdRol.FormattingEnabled = true;
+            this.tbIdRol.Location = new System.Drawing.Point(20, 478);
+            this.tbIdRol.Name = "tbIdRol";
+            this.tbIdRol.Size = new System.Drawing.Size(528, 45);
+            this.tbIdRol.TabIndex = 42;
+            this.tbIdRol.SelectedIndexChanged += new System.EventHandler(this.cbRol_SelectedIndexChanged);
             // 
-            // dateTimePicker2
+            // dateTimePickerFechaNacimiento
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(20, 396);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(528, 44);
-            this.dateTimePicker2.TabIndex = 45;
+            this.dateTimePickerFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(20, 396);
+            this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
+            this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(528, 44);
+            this.dateTimePickerFechaNacimiento.TabIndex = 45;
             // 
-            // comboBox1
+            // cbEstado
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 556);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(531, 44);
-            this.comboBox1.TabIndex = 47;
+            this.cbEstado.Location = new System.Drawing.Point(21, 556);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbEstado.Size = new System.Drawing.Size(531, 44);
+            this.cbEstado.TabIndex = 47;
             // 
             // bBuscar
             // 
@@ -266,6 +266,7 @@ namespace CapaPresentacion
             this.bBuscar.Text = "Buscar  ";
             this.bBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscar.UseVisualStyleBackColor = true;
+            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click_1);
             // 
             // panel4
             // 
@@ -335,6 +336,7 @@ namespace CapaPresentacion
             this.bmenu.Text = "Salir";
             this.bmenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bmenu.UseVisualStyleBackColor = true;
+            this.bmenu.Click += new System.EventHandler(this.bmenu_Click_1);
             // 
             // bCancelar
             // 
@@ -349,6 +351,7 @@ namespace CapaPresentacion
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click_1);
             // 
             // bEditar
             // 
@@ -363,6 +366,7 @@ namespace CapaPresentacion
             this.bEditar.Text = "Editar";
             this.bEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bEditar.UseVisualStyleBackColor = true;
+            this.bEditar.Click += new System.EventHandler(this.bEditar_Click_1);
             // 
             // bGuardar
             // 
@@ -377,6 +381,7 @@ namespace CapaPresentacion
             this.bGuardar.Text = "Guardar";
             this.bGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bGuardar.UseVisualStyleBackColor = true;
+            this.bGuardar.Click += new System.EventHandler(this.bGuardar_Click_1);
             // 
             // bAgregar
             // 
@@ -393,6 +398,7 @@ namespace CapaPresentacion
             this.bAgregar.Text = "Agregar";
             this.bAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click_1);
             // 
             // FMantEmpleado
             // 
@@ -403,20 +409,20 @@ namespace CapaPresentacion
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.bBuscar);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.cbRol);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.dateTimePickerFechaNacimiento);
+            this.Controls.Add(this.tbIdRol);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbIdEmpleado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbTelefono);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbApellido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PTitulo);
@@ -436,24 +442,24 @@ namespace CapaPresentacion
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbIdEmpleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbTelefono;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbApellido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PTitulo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbRol;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox tbIdRol;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaNacimiento;
+        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ToolStrip toolStrip1;

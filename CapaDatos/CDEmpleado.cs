@@ -93,7 +93,7 @@ namespace CapaDatos
                 micomando.Parameters.AddWithValue("@pNombre", objEmpleado.Nombre);
                 micomando.Parameters.AddWithValue("@pApellido", objEmpleado.Apellido);
                 micomando.Parameters.AddWithValue("@pTelefono", objEmpleado.Telefono);
-                micomando.Parameters.AddWithValue("@pFechaNacimineto", objEmpleado.FechaNacimiento);
+                micomando.Parameters.AddWithValue("@pFechaNacimiento", objEmpleado.FechaNacimiento);
                 micomando.Parameters.AddWithValue("@pEstado", objEmpleado.Estado);
                 micomando.Parameters.AddWithValue("@pIdRol", objEmpleado.IdRol);
 
