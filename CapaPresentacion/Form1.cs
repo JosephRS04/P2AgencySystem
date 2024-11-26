@@ -157,5 +157,10 @@ namespace CapaPresentacion
         {
             openChildForm(new FConsCliente());
         }
+
+        private void datosGeneralesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FConsVehiculo());
+        }
     }
 }

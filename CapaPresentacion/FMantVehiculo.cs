@@ -149,11 +149,11 @@ namespace CapaPresentacion
             if (Program.modificar)
             {
                 RecuperaDatos();  //Llamo al método para recuperar el Depto seleccionado 
-                //bEditar_Click(sender, e);  //Llamo al método editar 
+                bEditar_Click(sender, e);  //Llamo al método editar 
             }
             else
             {
-                //LimpiaObjetos(); //Llama al método LimpiaObjetos 
+                LimpiaObjetos(); //Llama al método LimpiaObjetos 
                 bBuscar.Focus();
             }
         }// fin boton buscar
@@ -173,7 +173,7 @@ namespace CapaPresentacion
                 tbAno.Text = row["Ano"].ToString();
                 tbTipo.Text = row["Tipo"].ToString();
                 tbKilometraje.Text = row["Kilometraje"].ToString();
-                dateTimePickerFechaIngreso.Text = row["FehcaIngreso"].ToString();
+                dateTimePickerFechaIngreso.Text = row["FechaIngreso"].ToString();
                 tbInformaciones.Text = row["Informaciones"].ToString();
                 tbPrecio.Text = row["Precio"].ToString();
                 cbEstado.Text = row["Estado"].ToString();

@@ -64,6 +64,12 @@
     <Compile Include="FConsCliente.Designer.cs">
       <DependentUpon>FConsCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FConsVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsVehiculo.Designer.cs">
+      <DependentUpon>FConsVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMantCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConsCliente.resx">
       <DependentUpon>FConsCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsVehiculo.resx">
+      <DependentUpon>FConsVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMantCliente.resx">
       <DependentUpon>FMantCliente.cs</DependentUpon>

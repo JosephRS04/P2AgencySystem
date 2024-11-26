@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacion
 {
-    partial class FConsCliente
+    partial class FConsVehiculo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConsCliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConsVehiculo));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bCancelar = new System.Windows.Forms.Button();
-            this.bAceptar = new System.Windows.Forms.Button();
+            this.bImprimir = new System.Windows.Forms.Button();
+            this.bSalir = new System.Windows.Forms.Button();
             this.bUltimo = new System.Windows.Forms.Button();
             this.bSiguiente = new System.Windows.Forms.Button();
             this.bAnterior = new System.Windows.Forms.Button();
@@ -47,13 +47,11 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.PTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.LCantVehiculo = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel5.SuspendLayout();
             this.PTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -65,58 +63,55 @@ namespace CapaPresentacion
             this.panel4.ForeColor = System.Drawing.Color.Coral;
             this.panel4.Location = new System.Drawing.Point(-149, 924);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2305, 5);
-            this.panel4.TabIndex = 54;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.panel4.Size = new System.Drawing.Size(2631, 5);
+            this.panel4.TabIndex = 61;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.bCancelar);
-            this.panel3.Controls.Add(this.bAceptar);
+            this.panel3.Controls.Add(this.LCantVehiculo);
+            this.panel3.Controls.Add(this.bImprimir);
+            this.panel3.Controls.Add(this.bSalir);
             this.panel3.Controls.Add(this.bUltimo);
             this.panel3.Controls.Add(this.bSiguiente);
             this.panel3.Controls.Add(this.bAnterior);
             this.panel3.Controls.Add(this.bPrimero);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.ForeColor = System.Drawing.Color.Coral;
-            this.panel3.Location = new System.Drawing.Point(0, 928);
+            this.panel3.Location = new System.Drawing.Point(0, 920);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1699, 83);
-            this.panel3.TabIndex = 53;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.Size = new System.Drawing.Size(1695, 83);
+            this.panel3.TabIndex = 60;
             // 
-            // bCancelar
+            // bImprimir
             // 
-            this.bCancelar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bCancelar.Image = ((System.Drawing.Image)(resources.GetObject("bCancelar.Image")));
-            this.bCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bCancelar.Location = new System.Drawing.Point(1325, 3);
-            this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(185, 73);
-            this.bCancelar.TabIndex = 5;
-            this.bCancelar.Text = "Cancelar";
-            this.bCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bCancelar.UseVisualStyleBackColor = true;
-            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
+            this.bImprimir.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bImprimir.Image = ((System.Drawing.Image)(resources.GetObject("bImprimir.Image")));
+            this.bImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bImprimir.Location = new System.Drawing.Point(1325, 3);
+            this.bImprimir.Name = "bImprimir";
+            this.bImprimir.Size = new System.Drawing.Size(185, 73);
+            this.bImprimir.TabIndex = 5;
+            this.bImprimir.Text = "Imprimir";
+            this.bImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bImprimir.UseVisualStyleBackColor = true;
             // 
-            // bAceptar
+            // bSalir
             // 
-            this.bAceptar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAceptar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bAceptar.Image = ((System.Drawing.Image)(resources.GetObject("bAceptar.Image")));
-            this.bAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bAceptar.Location = new System.Drawing.Point(1516, 3);
-            this.bAceptar.Name = "bAceptar";
-            this.bAceptar.Size = new System.Drawing.Size(170, 73);
-            this.bAceptar.TabIndex = 4;
-            this.bAceptar.Text = "Aceptar";
-            this.bAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bAceptar.UseVisualStyleBackColor = true;
-            this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
+            this.bSalir.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bSalir.Image = ((System.Drawing.Image)(resources.GetObject("bSalir.Image")));
+            this.bSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bSalir.Location = new System.Drawing.Point(1516, 3);
+            this.bSalir.Name = "bSalir";
+            this.bSalir.Size = new System.Drawing.Size(170, 73);
+            this.bSalir.TabIndex = 4;
+            this.bSalir.Text = "Salir";
+            this.bSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bSalir.UseVisualStyleBackColor = true;
+            this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
             // 
             // bUltimo
             // 
@@ -191,9 +186,9 @@ namespace CapaPresentacion
             this.DGVDatos.RowHeadersWidth = 62;
             this.DGVDatos.RowTemplate.Height = 28;
             this.DGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDatos.Size = new System.Drawing.Size(1699, 873);
-            this.DGVDatos.TabIndex = 52;
-            this.DGVDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDatos_CellContentClick);
+            this.DGVDatos.Size = new System.Drawing.Size(1695, 865);
+            this.DGVDatos.TabIndex = 59;
+            this.DGVDatos.CurrentCellChanged += new System.EventHandler(this.DGVDatos_CurrentCellChanged);
             // 
             // panel5
             // 
@@ -206,9 +201,8 @@ namespace CapaPresentacion
             this.panel5.ForeColor = System.Drawing.Color.Coral;
             this.panel5.Location = new System.Drawing.Point(0, 69);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1699, 69);
-            this.panel5.TabIndex = 51;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.panel5.Size = new System.Drawing.Size(1695, 69);
+            this.panel5.TabIndex = 58;
             // 
             // bBuscar
             // 
@@ -220,7 +214,7 @@ namespace CapaPresentacion
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(245, 62);
             this.bBuscar.TabIndex = 49;
-            this.bBuscar.Text = "Buscar Dato   ";
+            this.bBuscar.Text = "Consultar Dato";
             this.bBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscar.UseVisualStyleBackColor = true;
             this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
@@ -232,7 +226,6 @@ namespace CapaPresentacion
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(559, 53);
             this.tbBuscar.TabIndex = 1;
-            this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
             // label3
             // 
@@ -254,9 +247,8 @@ namespace CapaPresentacion
             this.panel2.ForeColor = System.Drawing.Color.Coral;
             this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2336, 5);
-            this.panel2.TabIndex = 50;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.Size = new System.Drawing.Size(2662, 5);
+            this.panel2.TabIndex = 57;
             // 
             // label1
             // 
@@ -266,10 +258,9 @@ namespace CapaPresentacion
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(618, 60);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Consulta General de clientes";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(638, 60);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Consulta General de vehiculo";
             // 
             // PTitulo
             // 
@@ -278,9 +269,8 @@ namespace CapaPresentacion
             this.PTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PTitulo.Location = new System.Drawing.Point(0, 0);
             this.PTitulo.Name = "PTitulo";
-            this.PTitulo.Size = new System.Drawing.Size(1699, 69);
-            this.PTitulo.TabIndex = 49;
-            this.PTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.PTitulo_Paint);
+            this.PTitulo.Size = new System.Drawing.Size(1695, 69);
+            this.PTitulo.TabIndex = 56;
             // 
             // panel1
             // 
@@ -290,31 +280,25 @@ namespace CapaPresentacion
             this.panel1.ForeColor = System.Drawing.Color.Coral;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1699, 69);
+            this.panel1.Size = new System.Drawing.Size(1695, 69);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
+            // LCantVehiculo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(808, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(387, 45);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Cantidad de clientes: ";
+            this.LCantVehiculo.AutoSize = true;
+            this.LCantVehiculo.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LCantVehiculo.ForeColor = System.Drawing.Color.Black;
+            this.LCantVehiculo.Location = new System.Drawing.Point(803, 28);
+            this.LCantVehiculo.Name = "LCantVehiculo";
+            this.LCantVehiculo.Size = new System.Drawing.Size(416, 45);
+            this.LCantVehiculo.TabIndex = 7;
+            this.LCantVehiculo.Text = "Cantidad de vehiculos: ";
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // FConsCliente
+            // FConsVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1699, 1011);
+            this.ClientSize = new System.Drawing.Size(1695, 1003);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.DGVDatos);
@@ -322,15 +306,15 @@ namespace CapaPresentacion
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PTitulo);
-            this.Name = "FConsCliente";
-            this.Text = "FConsCliente";
+            this.Name = "FConsVehiculo";
+            this.Text = "FConsVehiculo";
+            this.Load += new System.EventHandler(this.FConsVehiculo_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.PTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,8 +324,8 @@ namespace CapaPresentacion
 
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button bCancelar;
-        private System.Windows.Forms.Button bAceptar;
+        private System.Windows.Forms.Button bImprimir;
+        private System.Windows.Forms.Button bSalir;
         private System.Windows.Forms.Button bUltimo;
         private System.Windows.Forms.Button bSiguiente;
         private System.Windows.Forms.Button bAnterior;
@@ -350,12 +334,11 @@ namespace CapaPresentacion
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.TextBox tbBuscar;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PTitulo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Label LCantVehiculo;
     }
 }

@@ -259,6 +259,7 @@ namespace CapaPresentacion
             this.datosGeneralesToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
             this.datosGeneralesToolStripMenuItem.Text = "Datos &Generales";
             this.datosGeneralesToolStripMenuItem.ToolTipText = "Visualizar e imprimir información general de vehiculos";
+            this.datosGeneralesToolStripMenuItem.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem_Click);
             // 
             // porModeloToolStripMenuItem
             // 
