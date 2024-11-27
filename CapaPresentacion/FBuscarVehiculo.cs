@@ -124,17 +124,18 @@ namespace CapaPresentacion
             if (cNVehiculo.ObtenerVehiculo(valorparametro) != null)
             {
                 DGVDatos.DataSource = cNVehiculo.ObtenerVehiculo(valorparametro); //Se ejecuta el método para mostrar los datos
-                DGVDatos.Columns[0].Width = 80;    //IDVehiculo 
-                DGVDatos.Columns[1].Width = 100;   //VIN
-                DGVDatos.Columns[2].Width = 225;  //Marca
-                DGVDatos.Columns[3].Width = 100;  //Modelo
-                DGVDatos.Columns[4].Width = 125;  //Ano
-                DGVDatos.Columns[5].Width = 125;  //Tipo
-                DGVDatos.Columns[6].Width = 150;  //Kilometraje
+                DGVDatos.Columns[0].Width = 30;    //IDVehiculo 
+                DGVDatos.Columns[1].Width = 120;   //VIN
+                DGVDatos.Columns[2].Width = 70;  //Marca
+                DGVDatos.Columns[3].Width = 70;  //Modelo
+                DGVDatos.Columns[4].Width = 50;  //Ano
+                DGVDatos.Columns[5].Width = 60;  //Tipo
+                DGVDatos.Columns[6].Width = 80;  //Kilometraje
                 DGVDatos.Columns[7].Width = 100;  //FechaIngreso
-                DGVDatos.Columns[8].Width = 100;  //Informaciones
-                DGVDatos.Columns[9].Width = 100;  //Precio
-                DGVDatos.Columns[10].Width = 90;   //Estado 
+                DGVDatos.Columns[8].Width = 200;  //Informaciones
+                DGVDatos.Columns[9].Width = 40;  //Existencia
+                DGVDatos.Columns[10].Width = 100;  //Precio
+                DGVDatos.Columns[11].Width = 90;   //Estado 
             }
             else
                 MessageBox.Show("No se retornó ningún valor!");

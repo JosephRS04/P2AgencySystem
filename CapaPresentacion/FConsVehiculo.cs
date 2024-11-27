@@ -113,8 +113,9 @@ namespace CapaPresentacion
                 DGVDatos.Columns[6].Width = 150;  //Kilometraje
                 DGVDatos.Columns[7].Width = 100;  //FechaIngreso
                 DGVDatos.Columns[8].Width = 100;  //Informaciones
-                DGVDatos.Columns[9].Width = 100;  //Precio
-                DGVDatos.Columns[10].Width = 90;   //Estado 
+                DGVDatos.Columns[9].Width = 100;  //Existencia
+                DGVDatos.Columns[10].Width = 100;  //Precio
+                DGVDatos.Columns[11].Width = 90;   //Estado 
             }
             else           //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro 
             {

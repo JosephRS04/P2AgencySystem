@@ -39,6 +39,7 @@ namespace CapaPresentacion
             tbKilometraje.Clear();
             dateTimePickerFechaIngreso.ResetText();
             tbInformaciones.Clear();
+            tbExistencia.Clear();
             tbPrecio.Clear();
             cbEstado.SelectedItem = 0;
         }// fin metodo limpiar objeto
@@ -54,6 +55,7 @@ namespace CapaPresentacion
             tbKilometraje.Enabled = valor;
             dateTimePickerFechaIngreso.Enabled = valor;
             tbInformaciones.Enabled = valor;
+            tbExistencia.Enabled = valor;
             tbPrecio.Enabled = valor;
             cbEstado.Enabled = valor;
 
@@ -174,6 +176,7 @@ namespace CapaPresentacion
                 tbKilometraje.Text = row["Kilometraje"].ToString();
                 dateTimePickerFechaIngreso.Text = row["FechaIngreso"].ToString();
                 tbInformaciones.Text = row["Informaciones"].ToString();
+                tbExistencia.Text = row["Existencia"].ToString();
                 tbPrecio.Text = row["Precio"].ToString();
                 cbEstado.Text = row["Estado"].ToString();
             }
@@ -235,6 +238,11 @@ namespace CapaPresentacion
                 MessageBox.Show("Debe indicar el año de ingreso del vehiculo");
                 dateTimePickerFechaIngreso.Focus();
             }
+            else if (tbExistencia.Text == string.Empty)
+            {
+                MessageBox.Show("Debe indicar La existencia del vehiculo");
+                tbExistencia.Focus();
+            }
             else if (tbPrecio.Text == string.Empty)
             {
                 MessageBox.Show("Debe indicar el precio del vehiculo");
@@ -249,11 +257,11 @@ namespace CapaPresentacion
             {
                 if (Program.nuevo)
                 {
-                    mensaje = CNVehiculo.Insertar(Program.vidVehiculo, tbVIN.Text, tbMarca.Text, tbModelo.Text, tbAno.Text, tbTipo.Text, int.Parse(tbKilometraje.Text), dateTimePickerFechaIngreso.Value, tbInformaciones.Text, float.Parse(tbPrecio.Text), cbEstado.Text);
+                    mensaje = CNVehiculo.Insertar(Program.vidVehiculo, tbVIN.Text, tbMarca.Text, tbModelo.Text, tbAno.Text, tbTipo.Text, int.Parse(tbKilometraje.Text), dateTimePickerFechaIngreso.Value, tbInformaciones.Text, int.Parse(tbExistencia.Text), float.Parse(tbPrecio.Text), cbEstado.Text);
                 }
                 else
                 {
-                    mensaje = CNVehiculo.Actualizar(Program.vidVehiculo, tbVIN.Text, tbMarca.Text, tbModelo.Text, tbAno.Text, tbTipo.Text, int.Parse(tbKilometraje.Text), dateTimePickerFechaIngreso.Value, tbInformaciones.Text, float.Parse(tbPrecio.Text), cbEstado.Text);
+                    mensaje = CNVehiculo.Actualizar(Program.vidVehiculo, tbVIN.Text, tbMarca.Text, tbModelo.Text, tbAno.Text, tbTipo.Text, int.Parse(tbKilometraje.Text), dateTimePickerFechaIngreso.Value, tbInformaciones.Text, int.Parse(tbExistencia.Text), float.Parse(tbPrecio.Text), cbEstado.Text);
                 }
 
                 MessageBox.Show(mensaje, "Mensage de P2Systems", MessageBoxButtons.OK,MessageBoxIcon.Information);

@@ -12,7 +12,7 @@ namespace CapaNegocios
 {
     public class CNVehiculo
     {
-        public static string Insertar(int pIdVehiculo, string pVIN, string pMarca, string pModelo, string pAno, string pTipo, int pKilometraje, DateTime pFechaIngreso, string pInformaciones, float pPrecio, string pEstado)
+        public static string Insertar(int pIdVehiculo, string pVIN, string pMarca, string pModelo, string pAno, string pTipo, int pKilometraje, DateTime pFechaIngreso, string pInformaciones, int pExistencia, float pPrecio, string pEstado)
         {
             CDVehiculo objVehiculo = new CDVehiculo();
             objVehiculo.IdVehiculo = pIdVehiculo;
@@ -24,13 +24,14 @@ namespace CapaNegocios
             objVehiculo.Kilometraje = pKilometraje;
             objVehiculo.FechaIngreso = pFechaIngreso;
             objVehiculo.Informaciones = pInformaciones;
+            objVehiculo.Existencia = pExistencia;
             objVehiculo.Precio = pPrecio;
             objVehiculo.Estado = pEstado;
 
             return objVehiculo.Insertar(objVehiculo);
         }// fin metodo insertar
 
-        public static string Actualizar(int pIdVehiculo, string pVIN, string pMarca, string pModelo, string pAno, string pTipo, int pKilometraje, DateTime pFechaIngreso, string pInformaciones, float pPrecio, string pEstado)
+        public static string Actualizar(int pIdVehiculo, string pVIN, string pMarca, string pModelo, string pAno, string pTipo, int pKilometraje, DateTime pFechaIngreso, string pInformaciones, int pExistencia, float pPrecio, string pEstado)
         {
             CDVehiculo objVehiculo = new CDVehiculo();
             objVehiculo.IdVehiculo = pIdVehiculo;
@@ -42,6 +43,7 @@ namespace CapaNegocios
             objVehiculo.Kilometraje = pKilometraje;
             objVehiculo.FechaIngreso = pFechaIngreso;
             objVehiculo.Informaciones = pInformaciones;
+            objVehiculo.Existencia = pExistencia;
             objVehiculo.Precio = pPrecio;
             objVehiculo.Estado = pEstado;
 

@@ -172,5 +172,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FProcVenta());
+        }
     }
 }

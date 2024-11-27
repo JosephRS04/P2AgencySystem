@@ -67,6 +67,8 @@ namespace CapaPresentacion
             this.label12 = new System.Windows.Forms.Label();
             this.bBuscar = new System.Windows.Forms.Button();
             this.tbIdVehiculo = new System.Windows.Forms.TextBox();
+            this.tbExistencia = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PTitulo.SuspendLayout();
@@ -227,7 +229,7 @@ namespace CapaPresentacion
             // tbKilometraje
             // 
             this.tbKilometraje.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKilometraje.Location = new System.Drawing.Point(22, 473);
+            this.tbKilometraje.Location = new System.Drawing.Point(21, 396);
             this.tbKilometraje.Name = "tbKilometraje";
             this.tbKilometraje.Size = new System.Drawing.Size(531, 44);
             this.tbKilometraje.TabIndex = 37;
@@ -236,7 +238,7 @@ namespace CapaPresentacion
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 443);
+            this.label6.Location = new System.Drawing.Point(16, 366);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 36);
             this.label6.TabIndex = 36;
@@ -246,16 +248,16 @@ namespace CapaPresentacion
             // tbTipo
             // 
             this.tbTipo.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTipo.Location = new System.Drawing.Point(21, 396);
+            this.tbTipo.Location = new System.Drawing.Point(650, 387);
             this.tbTipo.Name = "tbTipo";
-            this.tbTipo.Size = new System.Drawing.Size(1163, 44);
+            this.tbTipo.Size = new System.Drawing.Size(533, 44);
             this.tbTipo.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 366);
+            this.label5.Location = new System.Drawing.Point(645, 357);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 36);
             this.label5.TabIndex = 34;
@@ -378,7 +380,7 @@ namespace CapaPresentacion
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 520);
+            this.label9.Location = new System.Drawing.Point(16, 443);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(227, 36);
             this.label9.TabIndex = 45;
@@ -387,7 +389,7 @@ namespace CapaPresentacion
             // tbInformaciones
             // 
             this.tbInformaciones.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbInformaciones.Location = new System.Drawing.Point(22, 627);
+            this.tbInformaciones.Location = new System.Drawing.Point(21, 550);
             this.tbInformaciones.Multiline = true;
             this.tbInformaciones.Name = "tbInformaciones";
             this.tbInformaciones.Size = new System.Drawing.Size(1160, 88);
@@ -397,7 +399,7 @@ namespace CapaPresentacion
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 597);
+            this.label10.Location = new System.Drawing.Point(16, 520);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(194, 36);
             this.label10.TabIndex = 47;
@@ -424,7 +426,7 @@ namespace CapaPresentacion
             // dateTimePickerFechaIngreso
             // 
             this.dateTimePickerFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFechaIngreso.Location = new System.Drawing.Point(23, 550);
+            this.dateTimePickerFechaIngreso.Location = new System.Drawing.Point(22, 473);
             this.dateTimePickerFechaIngreso.Name = "dateTimePickerFechaIngreso";
             this.dateTimePickerFechaIngreso.Size = new System.Drawing.Size(528, 44);
             this.dateTimePickerFechaIngreso.TabIndex = 51;
@@ -471,11 +473,31 @@ namespace CapaPresentacion
             this.tbIdVehiculo.TabIndex = 54;
             this.tbIdVehiculo.TextChanged += new System.EventHandler(this.tbIdVehiculo_TextChanged_1);
             // 
+            // tbExistencia
+            // 
+            this.tbExistencia.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbExistencia.Location = new System.Drawing.Point(22, 671);
+            this.tbExistencia.Name = "tbExistencia";
+            this.tbExistencia.Size = new System.Drawing.Size(531, 44);
+            this.tbExistencia.TabIndex = 56;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(17, 641);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(145, 36);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "Existencia";
+            // 
             // FMantVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1721, 1013);
+            this.Controls.Add(this.tbExistencia);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.tbVIN);
             this.Controls.Add(this.label12);
@@ -558,5 +580,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.TextBox tbIdVehiculo;
+        private System.Windows.Forms.TextBox tbExistencia;
+        private System.Windows.Forms.Label label13;
     }
 }

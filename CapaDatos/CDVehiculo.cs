@@ -12,7 +12,7 @@ namespace CapaDatos
 {
     public class CDVehiculo
     {
-        private int dIdVehiculo, dKilometraje;
+        private int dIdVehiculo, dKilometraje, dExistencia;
         private string dMarca, dVIN, dModelo, dAno, dTipo, dInformaciones , dEstado;
         DateTime dFechaIngreso;
         double dPrecio;
@@ -21,7 +21,7 @@ namespace CapaDatos
         {
         }
 
-        public CDVehiculo(int pIdVehiculo, string pVIN, string pMarca, string pModelo, string pAno, string pTipo, int pKilometraje, DateTime pFechaIngreso, string pInformaciones, double pPrecio, string pEstado)
+        public CDVehiculo(int pIdVehiculo, string pVIN, string pMarca, string pModelo, string pAno, string pTipo, int pKilometraje, DateTime pFechaIngreso, string pInformaciones, int pExistencia, double pPrecio, string pEstado)
         {
             dIdVehiculo = pIdVehiculo;
             dVIN = pVIN;
@@ -32,6 +32,7 @@ namespace CapaDatos
             dKilometraje = pKilometraje;
             dFechaIngreso = pFechaIngreso;
             dInformaciones = pInformaciones;
+            dExistencia = pExistencia;
             dPrecio = pPrecio;
             dEstado = pEstado;
         }
@@ -91,6 +92,12 @@ namespace CapaDatos
             set { dInformaciones = value; }
         }
 
+        public int Existencia
+        {
+            get { return dExistencia; }
+            set { dExistencia = value; }
+        }
+
         public double Precio
         {
             get { return dPrecio; }
@@ -125,6 +132,7 @@ namespace CapaDatos
                 micomando.Parameters.AddWithValue("@pKilometraje", objVehiculo.Kilometraje);
                 micomando.Parameters.AddWithValue("@pFechaIngreso", objVehiculo.FechaIngreso);
                 micomando.Parameters.AddWithValue("@pInformaciones", objVehiculo.Informaciones);
+                micomando.Parameters.AddWithValue("@pExistencia", objVehiculo.Existencia);
                 micomando.Parameters.AddWithValue("@pPrecio", objVehiculo.Precio);
                 micomando.Parameters.AddWithValue("@pEstado", objVehiculo.Estado);
 
@@ -163,6 +171,7 @@ namespace CapaDatos
                 micomando.Parameters.AddWithValue("@pKilometraje", objVehiculo.Kilometraje);
                 micomando.Parameters.AddWithValue("@pFechaIngreso", objVehiculo.FechaIngreso);
                 micomando.Parameters.AddWithValue("@pInformaciones", objVehiculo.Informaciones);
+                micomando.Parameters.AddWithValue("@pExistencia", objVehiculo.Existencia);
                 micomando.Parameters.AddWithValue("@pPrecio", objVehiculo.Precio);
                 micomando.Parameters.AddWithValue("@pEstado", objVehiculo.Estado);
 
