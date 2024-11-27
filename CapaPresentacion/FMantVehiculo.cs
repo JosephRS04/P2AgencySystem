@@ -86,13 +86,6 @@ namespace CapaPresentacion
 
         }// fin metodo habilitar botones
 
-
-
-
-
-
-
-
         private void bmenu_Click(object sender, EventArgs e)
         {
             this.Close();
