@@ -81,6 +81,10 @@ namespace CapaPresentacion
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tbExistencia = new System.Windows.Forms.TextBox();
+            this.labelCondicion = new System.Windows.Forms.Label();
+            this.tbIdVenta = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.bBuscarVenta = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PTitulo.SuspendLayout();
@@ -104,7 +108,7 @@ namespace CapaPresentacion
             // tbNCF
             // 
             this.tbNCF.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNCF.Location = new System.Drawing.Point(18, 146);
+            this.tbNCF.Location = new System.Drawing.Point(25, 296);
             this.tbNCF.Name = "tbNCF";
             this.tbNCF.Size = new System.Drawing.Size(531, 44);
             this.tbNCF.TabIndex = 82;
@@ -113,7 +117,7 @@ namespace CapaPresentacion
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 116);
+            this.label12.Location = new System.Drawing.Point(19, 266);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 36);
             this.label12.TabIndex = 81;
@@ -122,16 +126,18 @@ namespace CapaPresentacion
             // tbPrecio
             // 
             this.tbPrecio.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPrecio.Location = new System.Drawing.Point(20, 652);
+            this.tbPrecio.Location = new System.Drawing.Point(27, 758);
             this.tbPrecio.Name = "tbPrecio";
+            this.tbPrecio.ReadOnly = true;
             this.tbPrecio.Size = new System.Drawing.Size(531, 44);
             this.tbPrecio.TabIndex = 79;
+            this.tbPrecio.TextChanged += new System.EventHandler(this.tbPrecio_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 622);
+            this.label11.Location = new System.Drawing.Point(22, 728);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 36);
             this.label11.TabIndex = 78;
@@ -141,10 +147,9 @@ namespace CapaPresentacion
             // 
             this.tbCondicion.Enabled = false;
             this.tbCondicion.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCondicion.Location = new System.Drawing.Point(20, 300);
-            this.tbCondicion.Multiline = true;
+            this.tbCondicion.Location = new System.Drawing.Point(27, 450);
             this.tbCondicion.Name = "tbCondicion";
-            this.tbCondicion.Size = new System.Drawing.Size(529, 88);
+            this.tbCondicion.Size = new System.Drawing.Size(176, 44);
             this.tbCondicion.TabIndex = 77;
             this.tbCondicion.TextChanged += new System.EventHandler(this.tbCondicion_TextChanged);
             // 
@@ -152,7 +157,7 @@ namespace CapaPresentacion
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 269);
+            this.label10.Location = new System.Drawing.Point(22, 419);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(146, 36);
             this.label10.TabIndex = 76;
@@ -162,7 +167,7 @@ namespace CapaPresentacion
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 699);
+            this.label8.Location = new System.Drawing.Point(22, 805);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 36);
             this.label8.TabIndex = 73;
@@ -282,21 +287,23 @@ namespace CapaPresentacion
             this.bGuardar.Text = "Guardar";
             this.bGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bGuardar.UseVisualStyleBackColor = true;
+            this.bGuardar.Click += new System.EventHandler(this.bGuardar_Click);
             // 
             // tbCantidad
             // 
             this.tbCantidad.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCantidad.Location = new System.Drawing.Point(20, 498);
+            this.tbCantidad.Location = new System.Drawing.Point(27, 604);
             this.tbCantidad.Name = "tbCantidad";
             this.tbCantidad.Size = new System.Drawing.Size(531, 44);
             this.tbCantidad.TabIndex = 68;
+            this.tbCantidad.TextChanged += new System.EventHandler(this.tbCantidad_TextChanged);
             this.tbCantidad.Leave += new System.EventHandler(this.tbCantidad_Leave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 468);
+            this.label6.Location = new System.Drawing.Point(22, 574);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 36);
             this.label6.TabIndex = 67;
@@ -306,7 +313,7 @@ namespace CapaPresentacion
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 193);
+            this.label5.Location = new System.Drawing.Point(22, 343);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(207, 36);
             this.label5.TabIndex = 65;
@@ -401,7 +408,7 @@ namespace CapaPresentacion
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(19, 729);
+            this.cbEstado.Location = new System.Drawing.Point(26, 835);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbEstado.Size = new System.Drawing.Size(531, 44);
@@ -478,7 +485,7 @@ namespace CapaPresentacion
             this.cbTipofactura.Items.AddRange(new object[] {
             "Credito",
             "Contado"});
-            this.cbTipofactura.Location = new System.Drawing.Point(21, 223);
+            this.cbTipofactura.Location = new System.Drawing.Point(28, 373);
             this.cbTipofactura.Name = "cbTipofactura";
             this.cbTipofactura.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbTipofactura.Size = new System.Drawing.Size(531, 44);
@@ -488,7 +495,7 @@ namespace CapaPresentacion
             // tbUnidad
             // 
             this.tbUnidad.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUnidad.Location = new System.Drawing.Point(20, 575);
+            this.tbUnidad.Location = new System.Drawing.Point(27, 681);
             this.tbUnidad.Name = "tbUnidad";
             this.tbUnidad.Size = new System.Drawing.Size(531, 44);
             this.tbUnidad.TabIndex = 90;
@@ -497,7 +504,7 @@ namespace CapaPresentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 545);
+            this.label3.Location = new System.Drawing.Point(22, 651);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 36);
             this.label3.TabIndex = 89;
@@ -507,7 +514,7 @@ namespace CapaPresentacion
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 391);
+            this.label9.Location = new System.Drawing.Point(22, 497);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 36);
             this.label9.TabIndex = 91;
@@ -516,7 +523,7 @@ namespace CapaPresentacion
             // dateTimePickerFecha
             // 
             this.dateTimePickerFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFecha.Location = new System.Drawing.Point(21, 421);
+            this.dateTimePickerFecha.Location = new System.Drawing.Point(28, 527);
             this.dateTimePickerFecha.Name = "dateTimePickerFecha";
             this.dateTimePickerFecha.Size = new System.Drawing.Size(528, 44);
             this.dateTimePickerFecha.TabIndex = 92;
@@ -623,11 +630,56 @@ namespace CapaPresentacion
             this.tbExistencia.Size = new System.Drawing.Size(425, 44);
             this.tbExistencia.TabIndex = 102;
             // 
+            // labelCondicion
+            // 
+            this.labelCondicion.AutoSize = true;
+            this.labelCondicion.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCondicion.Location = new System.Drawing.Point(209, 453);
+            this.labelCondicion.Name = "labelCondicion";
+            this.labelCondicion.Size = new System.Drawing.Size(0, 36);
+            this.labelCondicion.TabIndex = 104;
+            // 
+            // tbIdVenta
+            // 
+            this.tbIdVenta.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdVenta.Location = new System.Drawing.Point(26, 103);
+            this.tbIdVenta.Name = "tbIdVenta";
+            this.tbIdVenta.Size = new System.Drawing.Size(531, 44);
+            this.tbIdVenta.TabIndex = 106;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(20, 73);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(165, 36);
+            this.label21.TabIndex = 105;
+            this.label21.Text = "ID de Venta";
+            // 
+            // bBuscarVenta
+            // 
+            this.bBuscarVenta.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBuscarVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bBuscarVenta.Image = ((System.Drawing.Image)(resources.GetObject("bBuscarVenta.Image")));
+            this.bBuscarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bBuscarVenta.Location = new System.Drawing.Point(23, 154);
+            this.bBuscarVenta.Name = "bBuscarVenta";
+            this.bBuscarVenta.Size = new System.Drawing.Size(200, 85);
+            this.bBuscarVenta.TabIndex = 107;
+            this.bBuscarVenta.Text = "Buscar  ";
+            this.bBuscarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bBuscarVenta.UseVisualStyleBackColor = true;
+            // 
             // FProcVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1886, 989);
+            this.Controls.Add(this.bBuscarVenta);
+            this.Controls.Add(this.tbIdVenta);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.labelCondicion);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tbExistencia);
             this.Controls.Add(this.label17);
@@ -735,5 +787,9 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox tbExistencia;
+        private System.Windows.Forms.Label labelCondicion;
+        private System.Windows.Forms.TextBox tbIdVenta;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button bBuscarVenta;
     }
 }

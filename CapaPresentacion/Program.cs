@@ -22,7 +22,7 @@ namespace CapaPresentacion
 
         public static int vidVentaCabecera = 0;
 
-        public static int vidVnetaDetalle = 0;
+        public static int vidVentaDetalle = 0;
 
         public static bool nuevo = false;
 
