@@ -12,7 +12,7 @@ namespace CapaDatos
 {
     public class CDVentaCabecera
     {
-        private int dIdventaCabecera, dIdCliente, dIdEmpleado, dCondicion, dCantidad;
+        private int dIdVentaCabecera, dIdCliente, dIdEmpleado, dCondicion, dCantidad;
         private string dNCF, dTipoFactura, dEstado;
         private DateTime dFecha;
 
@@ -20,9 +20,9 @@ namespace CapaDatos
         {
         }
 
-        public CDVentaCabecera(int pIdventaCabecera, DateTime pFecha, int pIdCliente, int pIdEmpleado, String pNCF, string pTipoFactura, int pCondicion, string pEstado)
+        public CDVentaCabecera(int pIdVentaCabecera, DateTime pFecha, int pIdCliente, int pIdEmpleado, String pNCF, string pTipoFactura, int pCondicion, string pEstado)
         {
-            dIdventaCabecera = pIdventaCabecera;
+            dIdVentaCabecera = pIdVentaCabecera;
             dFecha = pFecha;
             dIdCliente = pIdCliente;
             dIdEmpleado = pIdEmpleado;
@@ -34,10 +34,10 @@ namespace CapaDatos
 
 
         #region metodos get set 
-        public int IdventaCabecera
+        public int IdVentaCabecera
         {
-            get { return dIdventaCabecera; }
-            set { dIdventaCabecera = value; }
+            get { return dIdVentaCabecera; }
+            set { dIdVentaCabecera = value; }
         }
 
         public DateTime Fecha
@@ -129,7 +129,7 @@ namespace CapaDatos
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                micomando.Parameters.AddWithValue("@pIdVentaCabecera", objVentaCabecera.IdventaCabecera);
+                micomando.Parameters.AddWithValue("@pIdVentaCabecera", objVentaCabecera.IdVentaCabecera);
                 micomando.Parameters.AddWithValue("@pFecha", objVentaCabecera.Fecha);
                 micomando.Parameters.AddWithValue("@pIdCliente", objVentaCabecera.IdCliente);
                 micomando.Parameters.AddWithValue("@pIdEmpleado", objVentaCabecera.IdEmpleado);

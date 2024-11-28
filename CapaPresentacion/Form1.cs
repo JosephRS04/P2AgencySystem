@@ -13,14 +13,18 @@ namespace CapaPresentacion
     
     public partial class FMenu : Form
     {
-
-
-
+        public static FMenu Instance { get; private set; }
         private Form currentChildForm;
+        Form formVehiculo;
+        Form formCliente;
+        Form formEmpleado;
+        Form formRol;
+        Form formVenta;
 
         public FMenu()
         {
             InitializeComponent();
+            Instance = this;
         }
 
         public void closechildform(Form childform)
@@ -30,13 +34,8 @@ namespace CapaPresentacion
             this.Close();
         }
 
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
-            if (currentChildForm != null && currentChildForm.GetType() == childForm.GetType())
-            {
-                currentChildForm.BringToFront();
-                return;
-            }
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -70,6 +69,7 @@ namespace CapaPresentacion
 
         private void FMenu_Load(object sender, EventArgs e)
         {
+            
             panelDesktop.Visible = false;
             //this.BackgroundImage = 
         }
@@ -114,23 +114,58 @@ namespace CapaPresentacion
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new FMantCliente());
+            if (formCliente != null)
+            {
+                formCliente.BringToFront();
+                formCliente.Show();
+            }
+            else
+            {
+                formCliente = new FMantCliente();
+                openChildForm(formCliente);
+            }
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                FMenu menu = new FMenu();
-                openChildForm(new FMantVehiculo(menu));
+            if (formVehiculo != null)
+            {
+                formVehiculo.BringToFront();
+                formVehiculo.Show();
+            }
+            else
+            {
+                formVehiculo = new FMantVehiculo();
+                openChildForm(formVehiculo);
+            }
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new FMantEmpleado());
+            if (formEmpleado != null)
+            {
+                formEmpleado.BringToFront();
+                formEmpleado.Show();
+            }
+            else
+            {
+                formEmpleado = new FMantEmpleado();
+                openChildForm(formEmpleado);
+            }
         }
 
         private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new FMantRol());
+            if (formRol != null)
+            {
+                formRol.BringToFront();
+                formRol.Show();
+            }
+            else
+            {
+                formRol = new FMantRol();
+                openChildForm(formRol);
+            }
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -175,7 +210,21 @@ namespace CapaPresentacion
 
         private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new FProcVenta());
+            if (formVenta != null)
+            {
+                formVenta.BringToFront();
+                formVenta.Show();
+            }
+            else
+            {
+                formVenta = new FProcVenta();
+                openChildForm(formVenta);
+            }
+        }
+
+        private void empleadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

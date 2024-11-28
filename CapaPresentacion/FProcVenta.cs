@@ -20,6 +20,7 @@ namespace CapaPresentacion
         public static string vVehiculo, valorparametro = "", mensaje = "";
         public static double vPrecio, subTotalVenta = 0, itbisVenta = 0, totalVenta = 0;
         public static bool selecciono = false;
+        FMenu fmenu = new FMenu();
 
         private void bmenu_Click(object sender, EventArgs e)
         {
@@ -45,7 +46,7 @@ namespace CapaPresentacion
 
         private void FProcVenta_Load(object sender, EventArgs e)
         {
-
+            dateTimePickerFecha.Value = DateTime.Now;
         }
 
         private void bBuscar_Click(object sender, EventArgs e)
@@ -114,7 +115,6 @@ namespace CapaPresentacion
         private void Limpiar()
         {
             //textbox
-            tbIdVenta.Text = string.Empty;
             tbIdVehiculo.Text = string.Empty;
             tbVehiculo.Text = string.Empty;
             tbExistencia.Text = string.Empty;
@@ -130,7 +130,7 @@ namespace CapaPresentacion
             //combobox y fecha
             cbTipofactura.Text = string.Empty;
             cbEstado.Text = string.Empty;
-            dateTimePickerFecha.ResetText();
+            dateTimePickerFecha.Value = DateTime.Now;
             //labels
             lbSubTotal.Text = "Sub-Total: ";
             lbItebis.Text = "18% Itbis: ";
@@ -230,6 +230,8 @@ namespace CapaPresentacion
 
         private void bGuardar_Click(object sender, EventArgs e)
         {
+            Program.nuevo = true;
+            Program.modificar = false;
             if (tbNCF.Text == string.Empty)
             {
                 MessageBox.Show("Debe indicar el NCF del vehiculo");
@@ -285,13 +287,13 @@ namespace CapaPresentacion
                 int vNumFactura = ObtenerNumeroRandom();
                 if (Program.nuevo)
                 {
-                    mensaje = CNVentaCabecera.Insertar(Program.vidVentaCabecera, dateTimePickerFecha.Value, Convert.ToInt32(tbIdCliente.Text), Convert.ToInt32(tbIdEmpleado.Text), tbNCF.Text, cbTipofactura.Text, Convert.ToInt32(tbCondicion.Text), cbEstado.Text);
                     mensaje = CNVentaDetalle.Insertar(Program.vidVentaDetalle, vNumFactura, Convert.ToInt32(tbIdVehiculo.Text), Convert.ToInt32(tbPrecio.Text), Convert.ToInt32(tbCantidad.Text), tbUnidad.Text);
+                    mensaje = CNVentaCabecera.Insertar(Program.vidVentaCabecera, dateTimePickerFecha.Value, Convert.ToInt32(tbIdCliente.Text), Convert.ToInt32(tbIdEmpleado.Text), tbNCF.Text, cbTipofactura.Text, Convert.ToInt32(tbCondicion.Text), cbEstado.Text);
                     SqlConnection mi_conexion = new SqlConnection(miconexion);
                     try
                     {
                         SqlCommand miinstruccion = mi_conexion.CreateCommand();
-                        miinstruccion.CommandText = "UPDATE Vehiculo SET Existencia=" + vNewExistencia + "WHERE IdVehiculo" + Convert.ToInt32(tbIdVehiculo.Text);
+                        miinstruccion.CommandText = "UPDATE Vehiculo SET Existencia=" + vNewExistencia + " WHERE IdVehiculo=" + Convert.ToInt32(tbIdVehiculo.Text);
                         mi_conexion.Open();
                         //creamos el objeto datareader 
                         SqlDataReader midatareader = miinstruccion.ExecuteReader();

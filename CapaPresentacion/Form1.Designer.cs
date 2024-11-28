@@ -38,9 +38,9 @@ namespace CapaPresentacion
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -143,46 +143,47 @@ namespace CapaPresentacion
             // mantenimientosToolStripMenuItem
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vehiculoToolStripMenuItem,
             this.clienteToolStripMenuItem,
-            this.empleadoToolStripMenuItem,
-            this.vehiculoToolStripMenuItem});
+            this.empleadoToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(156, 36);
             this.mantenimientosToolStripMenuItem.Text = "&Mantenimientos";
             this.mantenimientosToolStripMenuItem.ToolTipText = "Crear y modificar los datos de Cliente";
             this.mantenimientosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientosToolStripMenuItem_Click);
             // 
+            // vehiculoToolStripMenuItem
+            // 
+            this.vehiculoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vehiculoToolStripMenuItem.Image")));
+            this.vehiculoToolStripMenuItem.Name = "vehiculoToolStripMenuItem";
+            this.vehiculoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.V)));
+            this.vehiculoToolStripMenuItem.Size = new System.Drawing.Size(290, 34);
+            this.vehiculoToolStripMenuItem.Text = "&Vehiculo";
+            this.vehiculoToolStripMenuItem.ToolTipText = "Crear y modificar los datos de Vehiculo";
+            this.vehiculoToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clienteToolStripMenuItem.Image")));
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.V)));
+            | System.Windows.Forms.Keys.C)));
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(290, 34);
-            this.clienteToolStripMenuItem.Text = "&Vehiculo";
-            this.clienteToolStripMenuItem.ToolTipText = "Crear y modificar los datos de Vehiculo";
-            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            this.clienteToolStripMenuItem.Text = "&Cliente";
+            this.clienteToolStripMenuItem.ToolTipText = "Crear y modificar los datos de Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
             // empleadoToolStripMenuItem
             // 
-            this.empleadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empleadoToolStripMenuItem.Image")));
-            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
-            this.empleadoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
-            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(290, 34);
-            this.empleadoToolStripMenuItem.Text = "&Cliente";
-            this.empleadoToolStripMenuItem.ToolTipText = "Crear y modificar los datos de Cliente";
-            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
-            // 
-            // vehiculoToolStripMenuItem
-            // 
-            this.vehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.empleadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empleadosToolStripMenuItem,
             this.rolesToolStripMenuItem});
-            this.vehiculoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vehiculoToolStripMenuItem.Image")));
-            this.vehiculoToolStripMenuItem.Name = "vehiculoToolStripMenuItem";
-            this.vehiculoToolStripMenuItem.Size = new System.Drawing.Size(290, 34);
-            this.vehiculoToolStripMenuItem.Text = "&Empleado";
+            this.empleadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empleadoToolStripMenuItem.Image")));
+            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(290, 34);
+            this.empleadoToolStripMenuItem.Text = "&Empleado";
+            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click_1);
             // 
             // empleadosToolStripMenuItem
             // 
@@ -218,7 +219,7 @@ namespace CapaPresentacion
             // 
             this.facturaciónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturaciónToolStripMenuItem.Image")));
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(203, 34);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             this.facturaciónToolStripMenuItem.ToolTipText = "Registrar las facturas de venta";
             this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
@@ -726,9 +727,9 @@ namespace CapaPresentacion
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripMenuItem mantenimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;

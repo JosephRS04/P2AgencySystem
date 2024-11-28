@@ -18,7 +18,7 @@ namespace CapaPresentacion
     public partial class FMantVehiculo : Form
     {
         public string valorparametro = "", mensaje = "";
-        public FMantVehiculo(Form form)
+        public FMantVehiculo()
         {
             InitializeComponent();
         }

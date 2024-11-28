@@ -12,12 +12,12 @@ namespace CapaNegocios
 {
     public class CNVentaCabecera
     {
-        public static string Insertar(int pIdventaCabecera, DateTime pFecha, int pIdCliente, int pIdEmpleado, String pNCF, string pTipoFactura, int pCondicion, string pEstado)
+        public static string Insertar(int pIdVentaCabecera, DateTime pFecha, int pIdCliente, int pIdEmpleado, String pNCF, string pTipoFactura, int pCondicion, string pEstado)
         {
             CDVentaCabecera objVentaCabecera = new CDVentaCabecera();
-            objVentaCabecera.IdventaCabecera = pIdventaCabecera;
+            objVentaCabecera.IdVentaCabecera = pIdVentaCabecera;
             objVentaCabecera.Fecha = pFecha;
-            objVentaCabecera.IdEmpleado = pIdCliente;
+            objVentaCabecera.IdCliente = pIdCliente;
             objVentaCabecera.IdEmpleado = pIdEmpleado;
             objVentaCabecera.NCF = pNCF;
             objVentaCabecera.TipoFactura = pTipoFactura;
@@ -28,12 +28,12 @@ namespace CapaNegocios
         }// fin metodo insertar 
 
 
-        public static string Actualizar(int pIdventaCabecera, DateTime pFecha, int pIdCliente, int pIdEmpleado, String pNCF, string pTipoFactura, int pCondicion, string pEstado)
+        public static string Actualizar(int pIdVentaCabecera, DateTime pFecha, int pIdCliente, int pIdEmpleado, String pNCF, string pTipoFactura, int pCondicion, string pEstado)
         {
             CDVentaCabecera objVentaCabecera = new CDVentaCabecera();
-            objVentaCabecera.IdventaCabecera = pIdventaCabecera;
+            objVentaCabecera.IdVentaCabecera = pIdVentaCabecera;
             objVentaCabecera.Fecha = pFecha;
-            objVentaCabecera.IdEmpleado = pIdCliente;
+            objVentaCabecera.IdCliente = pIdCliente;
             objVentaCabecera.IdEmpleado = pIdEmpleado;
             objVentaCabecera.NCF = pNCF;
             objVentaCabecera.TipoFactura = pTipoFactura;

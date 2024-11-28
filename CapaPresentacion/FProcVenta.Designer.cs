@@ -63,7 +63,6 @@ namespace CapaPresentacion
             this.label7 = new System.Windows.Forms.Label();
             this.tbIdVehiculo = new System.Windows.Forms.TextBox();
             this.bBuscarCliente = new System.Windows.Forms.Button();
-            this.bRegistrarCliente = new System.Windows.Forms.Button();
             this.bBuscarEmpleado = new System.Windows.Forms.Button();
             this.cbTipofactura = new System.Windows.Forms.ComboBox();
             this.tbUnidad = new System.Windows.Forms.TextBox();
@@ -82,9 +81,6 @@ namespace CapaPresentacion
             this.label19 = new System.Windows.Forms.Label();
             this.tbExistencia = new System.Windows.Forms.TextBox();
             this.labelCondicion = new System.Windows.Forms.Label();
-            this.tbIdVenta = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.bBuscarVenta = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PTitulo.SuspendLayout();
@@ -98,9 +94,9 @@ namespace CapaPresentacion
             this.bBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bBuscarVehiculo.Location = new System.Drawing.Point(657, 292);
             this.bBuscarVehiculo.Name = "bBuscarVehiculo";
-            this.bBuscarVehiculo.Size = new System.Drawing.Size(200, 85);
+            this.bBuscarVehiculo.Size = new System.Drawing.Size(298, 85);
             this.bBuscarVehiculo.TabIndex = 55;
-            this.bBuscarVehiculo.Text = "Buscar  ";
+            this.bBuscarVehiculo.Text = "Buscar Vehiculo ";
             this.bBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscarVehiculo.UseVisualStyleBackColor = true;
             this.bBuscarVehiculo.Click += new System.EventHandler(this.bBuscar_Click);
@@ -442,26 +438,12 @@ namespace CapaPresentacion
             this.bBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bBuscarCliente.Location = new System.Drawing.Point(658, 530);
             this.bBuscarCliente.Name = "bBuscarCliente";
-            this.bBuscarCliente.Size = new System.Drawing.Size(200, 85);
+            this.bBuscarCliente.Size = new System.Drawing.Size(297, 85);
             this.bBuscarCliente.TabIndex = 84;
-            this.bBuscarCliente.Text = "Buscar  ";
+            this.bBuscarCliente.Text = "Buscar Cliente ";
             this.bBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscarCliente.UseVisualStyleBackColor = true;
             this.bBuscarCliente.Click += new System.EventHandler(this.bBuscarCliente_Click);
-            // 
-            // bRegistrarCliente
-            // 
-            this.bRegistrarCliente.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bRegistrarCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bRegistrarCliente.Image = ((System.Drawing.Image)(resources.GetObject("bRegistrarCliente.Image")));
-            this.bRegistrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bRegistrarCliente.Location = new System.Drawing.Point(864, 530);
-            this.bRegistrarCliente.Name = "bRegistrarCliente";
-            this.bRegistrarCliente.Size = new System.Drawing.Size(200, 85);
-            this.bRegistrarCliente.TabIndex = 85;
-            this.bRegistrarCliente.Text = "Registrar";
-            this.bRegistrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bRegistrarCliente.UseVisualStyleBackColor = true;
             // 
             // bBuscarEmpleado
             // 
@@ -471,9 +453,9 @@ namespace CapaPresentacion
             this.bBuscarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bBuscarEmpleado.Location = new System.Drawing.Point(658, 794);
             this.bBuscarEmpleado.Name = "bBuscarEmpleado";
-            this.bBuscarEmpleado.Size = new System.Drawing.Size(200, 85);
+            this.bBuscarEmpleado.Size = new System.Drawing.Size(297, 85);
             this.bBuscarEmpleado.TabIndex = 86;
-            this.bBuscarEmpleado.Text = "Buscar  ";
+            this.bBuscarEmpleado.Text = "Buscar Empleado";
             this.bBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscarEmpleado.UseVisualStyleBackColor = true;
             // 
@@ -639,46 +621,11 @@ namespace CapaPresentacion
             this.labelCondicion.Size = new System.Drawing.Size(0, 36);
             this.labelCondicion.TabIndex = 104;
             // 
-            // tbIdVenta
-            // 
-            this.tbIdVenta.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIdVenta.Location = new System.Drawing.Point(26, 103);
-            this.tbIdVenta.Name = "tbIdVenta";
-            this.tbIdVenta.Size = new System.Drawing.Size(531, 44);
-            this.tbIdVenta.TabIndex = 106;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(20, 73);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(165, 36);
-            this.label21.TabIndex = 105;
-            this.label21.Text = "ID de Venta";
-            // 
-            // bBuscarVenta
-            // 
-            this.bBuscarVenta.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bBuscarVenta.Image = ((System.Drawing.Image)(resources.GetObject("bBuscarVenta.Image")));
-            this.bBuscarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bBuscarVenta.Location = new System.Drawing.Point(23, 154);
-            this.bBuscarVenta.Name = "bBuscarVenta";
-            this.bBuscarVenta.Size = new System.Drawing.Size(200, 85);
-            this.bBuscarVenta.TabIndex = 107;
-            this.bBuscarVenta.Text = "Buscar  ";
-            this.bBuscarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bBuscarVenta.UseVisualStyleBackColor = true;
-            // 
             // FProcVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1886, 989);
-            this.Controls.Add(this.bBuscarVenta);
-            this.Controls.Add(this.tbIdVenta);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.labelCondicion);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tbExistencia);
@@ -696,7 +643,6 @@ namespace CapaPresentacion
             this.Controls.Add(this.tbUnidad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bBuscarEmpleado);
-            this.Controls.Add(this.bRegistrarCliente);
             this.Controls.Add(this.bBuscarCliente);
             this.Controls.Add(this.bBuscarVehiculo);
             this.Controls.Add(this.tbNCF);
@@ -766,7 +712,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbIdVehiculo;
         private System.Windows.Forms.Button bBuscarCliente;
-        private System.Windows.Forms.Button bRegistrarCliente;
         private System.Windows.Forms.Button bBuscarEmpleado;
         private System.Windows.Forms.ComboBox cbTipofactura;
         private System.Windows.Forms.ToolStripLabel lbTotal;
@@ -788,8 +733,5 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox tbExistencia;
         private System.Windows.Forms.Label labelCondicion;
-        private System.Windows.Forms.TextBox tbIdVenta;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button bBuscarVenta;
     }
 }
