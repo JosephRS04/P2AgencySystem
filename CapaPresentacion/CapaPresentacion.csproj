@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAcercaDe.Designer.cs">
+      <DependentUpon>FAcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="ReportVehiculos.Designer.cs">
       <DependentUpon>ReportVehiculos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FAcercaDe.resx">
+      <DependentUpon>FAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FBuscarCliente.resx">
       <DependentUpon>FBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>

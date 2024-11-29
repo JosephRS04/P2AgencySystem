@@ -226,5 +226,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FAcercaDe());
+        }
     }
 }

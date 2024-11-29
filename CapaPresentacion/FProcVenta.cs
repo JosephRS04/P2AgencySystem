@@ -118,7 +118,7 @@ namespace CapaPresentacion
             tbVehiculo.Text = string.Empty;
             tbExistencia.Text = string.Empty;
             tbNCF.Text = string.Empty;
-            tbCondicion.Text = string.Empty;
+            tbCondicion.Text = "0";
             tbCantidad.Text = string.Empty;
             tbUnidad.Text = string.Empty;
             tbPrecio.Text = string.Empty;
@@ -146,6 +146,11 @@ namespace CapaPresentacion
         }
 
         private void tbCondicion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUnidad_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -304,12 +309,6 @@ namespace CapaPresentacion
                         MessageBox.Show("Ocurrió un error al realizar la operación de actualizar existencia! ");
                     }
                 }
-                else
-                {
-                    mensaje = CNVentaCabecera.Actualizar(Program.vidVentaCabecera, dateTimePickerFecha.Value, Convert.ToInt32(tbIdCliente.Text), Convert.ToInt32(tbIdEmpleado.Text), tbNCF.Text, cbTipofactura.Text, Convert.ToInt32(tbCondicion.Text), cbEstado.Text);
-                    mensaje = CNVentaDetalle.Actualizar(Program.vidVentaDetalle, vNumFactura, Convert.ToInt32(tbIdVehiculo.Text), Convert.ToInt32(tbPrecio.Text), Convert.ToInt32(tbCantidad.Text), tbUnidad.Text);
-                }
-
                 MessageBox.Show(mensaje, "Mensage de P2Systems", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Program.nuevo = false;
                 Program.modificar = false;
@@ -333,29 +332,26 @@ namespace CapaPresentacion
 
         private void MostrarMercancia()
         {
-            SqlConnection mi_conexion = new SqlConnection(miconexion);
+            //SqlConnection mi_conexion = new SqlConnection(miconexion);
             try
             {
-                SqlCommand miinstruccion = mi_conexion.CreateCommand();
-                miinstruccion.CommandText = "Select IdVehiculo, Existencia, Precio, Marca, Modelo From Vehiculo Where IDVehiculo = "+Convert.ToInt32(Program.vidVehiculo);   
-                mi_conexion.Open();
-                //creamos el objeto datareader 
-                SqlDataReader midatareader = miinstruccion.ExecuteReader();
-                //Leer la fila devuelta usando el obejto SqlDataReader 
-                midatareader.Read();
+                string vparametro = Program.vidVehiculo.ToString();
+                CNVehiculo cNVehiculo = new CNVehiculo();
+                DataTable dt = new DataTable();
+                dt = cNVehiculo.ObtenerVehiculo(vparametro);
+                foreach (DataRow row in dt.Rows)
+                {
                 //Pasar los valores a las variables 
-                vVehiculo = Convert.ToString(midatareader["IdVehiculo"]);
-                vExistencia = Convert.ToInt32(midatareader["Existencia"]);
-                vPrecio = Convert.ToDouble(midatareader["Precio"]);
+                    
+                    vExistencia = Convert.ToInt32(row["Existencia"]);
+                    vPrecio = Convert.ToDouble(row["Precio"]);
                 //Mostrar los valores de las columnas contenidas en el Objeto SqlDataReader 
-                tbIdVehiculo.Text = Convert.ToString(midatareader["IdVehiculo"]);
-                tbVehiculo.Text = Convert.ToString(midatareader["Marca"])+" "+ Convert.ToString(midatareader["Modelo"]);
-                tbExistencia.Text = Convert.ToString(midatareader["Existencia"]);
-                tbPrecio.Text = Convert.ToString(midatareader["Precio"]);
-                tbExistencia.Text = Convert.ToString(midatareader["Existencia"]);
-                //Cerrar el Objeto SqlDataReader al terminar de usarlo 
-                midatareader.Close();
-                mi_conexion.Close();
+                    tbIdVehiculo.Text = row["IdVehiculo"].ToString();
+                    tbVehiculo.Text = row["Marca"].ToString() + " " + row["Modelo"].ToString();
+                    tbExistencia.Text = row["Existencia"].ToString();
+                    tbPrecio.Text = row["Precio"].ToString();
+                   
+                }
             } 
             catch 
             { 

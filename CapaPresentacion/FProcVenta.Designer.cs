@@ -147,6 +147,7 @@ namespace CapaPresentacion
             this.tbCondicion.Name = "tbCondicion";
             this.tbCondicion.Size = new System.Drawing.Size(176, 44);
             this.tbCondicion.TabIndex = 77;
+            this.tbCondicion.Text = "0";
             this.tbCondicion.TextChanged += new System.EventHandler(this.tbCondicion_TextChanged);
             // 
             // label10
@@ -481,6 +482,7 @@ namespace CapaPresentacion
             this.tbUnidad.Name = "tbUnidad";
             this.tbUnidad.Size = new System.Drawing.Size(531, 44);
             this.tbUnidad.TabIndex = 90;
+            this.tbUnidad.TextChanged += new System.EventHandler(this.tbUnidad_TextChanged);
             // 
             // label3
             // 

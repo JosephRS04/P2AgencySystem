@@ -627,7 +627,7 @@ namespace CapaPresentacion
             this.contenidoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("contenidoToolStripMenuItem.Image")));
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
             this.contenidoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.contenidoToolStripMenuItem.Text = "Contenido";
             this.contenidoToolStripMenuItem.ToolTipText = "Mostrar la ayuda del sistema";
             // 
@@ -635,9 +635,10 @@ namespace CapaPresentacion
             // 
             this.acercaDeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaDeToolStripMenuItem.Image")));
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             this.acercaDeToolStripMenuItem.ToolTipText = "Mostrar información sobre el sistema";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // salidaToolStripMenuItem
             // 
