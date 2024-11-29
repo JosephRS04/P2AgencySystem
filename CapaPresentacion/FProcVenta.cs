@@ -16,7 +16,7 @@ namespace CapaPresentacion
 
     public partial class FProcVenta : Form
     {
-        public static int vIdVehiculo = 0, vExistencia = 0, vCantidad = 0, vNewExistencia=0;
+        public static int vExistencia = 0, vCantidad = 0, vNewExistencia=0;
         public static string vVehiculo, valorparametro = "", mensaje = "";
         public static double vPrecio, subTotalVenta = 0, itbisVenta = 0, totalVenta = 0;
         public static bool selecciono = false;
@@ -50,7 +50,6 @@ namespace CapaPresentacion
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-            vIdVehiculo = 0;
             FBuscarVehiculo fbvehiculo = new FBuscarVehiculo();
             fbvehiculo.ShowDialog();
             if (Program.modificar)
@@ -109,7 +108,7 @@ namespace CapaPresentacion
                 tbCantidad.Focus();
             }// fin if cantidad no esta vacio
 
-        }// fin ,etodo cantidad leave
+        }// fin metodo cantidad leave
 
         private void Limpiar()
         {
@@ -135,7 +134,7 @@ namespace CapaPresentacion
             lbItebis.Text = "18% Itbis: ";
             lbTotal.Text = "Total: ";
             //variables
-            vIdVehiculo = 0; vExistencia = 0; vCantidad = 0;
+            vExistencia = 0; vCantidad = 0;
             vVehiculo = ""; vPrecio = 0.00; 
             selecciono = false;
         }// fin metodo limpiar
@@ -155,9 +154,21 @@ namespace CapaPresentacion
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int NCFCode = ObtenerNumeroRandom();
+            string NewNCF = "A01" + NCFCode;
+            tbNCF.Text = NewNCF;
+        }
+
         private void tbPrecio_TextChanged(object sender, EventArgs e)
         {
             calcularVenta();
+        }
+
+        private void tbNCF_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private int ObtenerNumeroRandom()
@@ -341,8 +352,7 @@ namespace CapaPresentacion
                 dt = cNVehiculo.ObtenerVehiculo(vparametro);
                 foreach (DataRow row in dt.Rows)
                 {
-                //Pasar los valores a las variables 
-                    
+                //Pasar los valores a las variables  
                     vExistencia = Convert.ToInt32(row["Existencia"]);
                     vPrecio = Convert.ToDouble(row["Precio"]);
                 //Mostrar los valores de las columnas contenidas en el Objeto SqlDataReader 
@@ -350,7 +360,6 @@ namespace CapaPresentacion
                     tbVehiculo.Text = row["Marca"].ToString() + " " + row["Modelo"].ToString();
                     tbExistencia.Text = row["Existencia"].ToString();
                     tbPrecio.Text = row["Precio"].ToString();
-                   
                 }
             } 
             catch 

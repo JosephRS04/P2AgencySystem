@@ -81,6 +81,7 @@ namespace CapaPresentacion
             this.label19 = new System.Windows.Forms.Label();
             this.tbExistencia = new System.Windows.Forms.TextBox();
             this.labelCondicion = new System.Windows.Forms.Label();
+            this.bNCFCreate = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PTitulo.SuspendLayout();
@@ -106,8 +107,9 @@ namespace CapaPresentacion
             this.tbNCF.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNCF.Location = new System.Drawing.Point(25, 296);
             this.tbNCF.Name = "tbNCF";
-            this.tbNCF.Size = new System.Drawing.Size(531, 44);
+            this.tbNCF.Size = new System.Drawing.Size(358, 44);
             this.tbNCF.TabIndex = 82;
+            this.tbNCF.TextChanged += new System.EventHandler(this.tbNCF_TextChanged);
             // 
             // label12
             // 
@@ -623,11 +625,27 @@ namespace CapaPresentacion
             this.labelCondicion.Size = new System.Drawing.Size(0, 36);
             this.labelCondicion.TabIndex = 104;
             // 
+            // bNCFCreate
+            // 
+            this.bNCFCreate.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNCFCreate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bNCFCreate.Image = ((System.Drawing.Image)(resources.GetObject("bNCFCreate.Image")));
+            this.bNCFCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bNCFCreate.Location = new System.Drawing.Point(389, 259);
+            this.bNCFCreate.Name = "bNCFCreate";
+            this.bNCFCreate.Size = new System.Drawing.Size(167, 73);
+            this.bNCFCreate.TabIndex = 5;
+            this.bNCFCreate.Text = "Crear";
+            this.bNCFCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bNCFCreate.UseVisualStyleBackColor = true;
+            this.bNCFCreate.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FProcVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1886, 989);
+            this.Controls.Add(this.bNCFCreate);
             this.Controls.Add(this.labelCondicion);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tbExistencia);
@@ -735,5 +753,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox tbExistencia;
         private System.Windows.Forms.Label labelCondicion;
+        private System.Windows.Forms.Button bNCFCreate;
     }
 }
