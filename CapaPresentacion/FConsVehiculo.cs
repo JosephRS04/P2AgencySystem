@@ -83,6 +83,20 @@ namespace CapaPresentacion
             }
         }
 
+        private void bImprimir_Click(object sender, EventArgs e)
+        {
+           if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string rutaGuardar = saveFileDialog1.FileName;
+                ReportVehiculos report = new ReportVehiculos();
+                report.RequestParameters = false;
+                
+                report.ExportToPdf(rutaGuardar+".pdf");
+            }
+
+
+        }
+
         public FConsVehiculo()
         {
             InitializeComponent();

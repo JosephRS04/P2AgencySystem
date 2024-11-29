@@ -48,6 +48,7 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.PTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel5.SuspendLayout();
@@ -108,6 +109,7 @@ namespace CapaPresentacion
             this.bImprimir.Text = "Imprimir";
             this.bImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bImprimir.UseVisualStyleBackColor = true;
+            this.bImprimir.Click += new System.EventHandler(this.bImprimir_Click);
             // 
             // bSalir
             // 
@@ -341,5 +343,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Panel PTitulo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LCantVehiculo;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

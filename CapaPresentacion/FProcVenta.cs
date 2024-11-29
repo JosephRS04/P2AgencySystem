@@ -16,23 +16,22 @@ namespace CapaPresentacion
 
     public partial class FProcVenta : Form
     {
-        public static int vIdVehiculo = 0, vExistencia = 0, vCantidad = 0, vReorden = 0, vNewExistencia=0;
+        public static int vIdVehiculo = 0, vExistencia = 0, vCantidad = 0, vNewExistencia=0;
         public static string vVehiculo, valorparametro = "", mensaje = "";
         public static double vPrecio, subTotalVenta = 0, itbisVenta = 0, totalVenta = 0;
         public static bool selecciono = false;
-        FMenu fmenu = new FMenu();
+        public static string miconexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\JRProgramaciones\P2AgencySystem\CapaDatos\DBAgencySystem.mdf;Integrated Security=True";
+        public FProcVenta()
+        {
+            InitializeComponent();
+        }
 
         private void bmenu_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        public static string miconexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\JRProgramaciones\P2AgencySystem\CapaDatos\DBAgencySystem.mdf;Integrated Security=True";
 
-        public FProcVenta()
-        {
-            InitializeComponent();
-        }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -137,7 +136,7 @@ namespace CapaPresentacion
             lbTotal.Text = "Total: ";
             //variables
             vIdVehiculo = 0; vExistencia = 0; vCantidad = 0;
-            vVehiculo = ""; vPrecio = 0.00; //vReorden = 0;
+            vVehiculo = ""; vPrecio = 0.00; 
             selecciono = false;
         }// fin metodo limpiar
 
@@ -348,14 +347,12 @@ namespace CapaPresentacion
                 vVehiculo = Convert.ToString(midatareader["IdVehiculo"]);
                 vExistencia = Convert.ToInt32(midatareader["Existencia"]);
                 vPrecio = Convert.ToDouble(midatareader["Precio"]);
-                //vReorden = Convert.ToInt32(midatareader["Nivel_Reorden"]);
                 //Mostrar los valores de las columnas contenidas en el Objeto SqlDataReader 
                 tbIdVehiculo.Text = Convert.ToString(midatareader["IdVehiculo"]);
                 tbVehiculo.Text = Convert.ToString(midatareader["Marca"])+" "+ Convert.ToString(midatareader["Modelo"]);
                 tbExistencia.Text = Convert.ToString(midatareader["Existencia"]);
                 tbPrecio.Text = Convert.ToString(midatareader["Precio"]);
                 tbExistencia.Text = Convert.ToString(midatareader["Existencia"]);
-                //tbreorden.Text = Convert.ToString(midatareader["Nivel_Reorden"]);
                 //Cerrar el Objeto SqlDataReader al terminar de usarlo 
                 midatareader.Close();
                 mi_conexion.Close();
