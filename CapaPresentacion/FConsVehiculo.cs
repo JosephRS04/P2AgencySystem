@@ -25,7 +25,7 @@ namespace CapaPresentacion
 
         private void bSalir_Click(object sender, EventArgs e)
         {
-            Close();  
+            this.Visible = false; 
         }
 
         private void bBuscar_Click(object sender, EventArgs e)

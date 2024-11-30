@@ -74,7 +74,7 @@ namespace CapaPresentacion
 
         private void bAceptar_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
         }
 
         private void DGVDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)

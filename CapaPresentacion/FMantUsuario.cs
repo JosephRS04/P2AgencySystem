@@ -74,8 +74,7 @@ namespace CapaPresentacion
 
         private void bmenu_Click(object sender, EventArgs e)
         {
-            FMenu menu = new FMenu();
-            menu.closechildform(this);
+            this.Visible = false;
         }
 
         private void bAgregar_Click(object sender, EventArgs e)

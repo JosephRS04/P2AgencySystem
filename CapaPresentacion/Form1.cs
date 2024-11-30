@@ -29,9 +29,7 @@ namespace CapaPresentacion
 
         public void closechildform(Form childform)
         {
-            childform.Close();
-            childform = null;
-            this.Close();
+            
         }
 
         public void openChildForm(Form childForm)
@@ -230,6 +228,11 @@ namespace CapaPresentacion
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openChildForm(new FAcercaDe());
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

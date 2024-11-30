@@ -250,15 +250,16 @@ namespace CapaPresentacion
             this.porPrecioToolStripMenuItem});
             this.vehiculosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vehiculosToolStripMenuItem.Image")));
             this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
-            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
+            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.vehiculosToolStripMenuItem.Text = "Vehiculos";
             // 
             // datosGeneralesToolStripMenuItem
             // 
             this.datosGeneralesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("datosGeneralesToolStripMenuItem.Image")));
             this.datosGeneralesToolStripMenuItem.Name = "datosGeneralesToolStripMenuItem";
-            this.datosGeneralesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.datosGeneralesToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.datosGeneralesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.V)));
+            this.datosGeneralesToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.datosGeneralesToolStripMenuItem.Text = "Datos &Generales";
             this.datosGeneralesToolStripMenuItem.ToolTipText = "Visualizar e imprimir información general de vehiculos";
             this.datosGeneralesToolStripMenuItem.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem_Click);
@@ -266,7 +267,7 @@ namespace CapaPresentacion
             // porModeloToolStripMenuItem
             // 
             this.porModeloToolStripMenuItem.Name = "porModeloToolStripMenuItem";
-            this.porModeloToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porModeloToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porModeloToolStripMenuItem.Text = "Por Estado";
             this.porModeloToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su estado";
             this.porModeloToolStripMenuItem.Click += new System.EventHandler(this.porModeloToolStripMenuItem_Click);
@@ -274,42 +275,42 @@ namespace CapaPresentacion
             // porMdToolStripMenuItem
             // 
             this.porMdToolStripMenuItem.Name = "porMdToolStripMenuItem";
-            this.porMdToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porMdToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porMdToolStripMenuItem.Text = "Por Modelo";
             this.porMdToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su modelo";
             // 
             // porAñoToolStripMenuItem
             // 
             this.porAñoToolStripMenuItem.Name = "porAñoToolStripMenuItem";
-            this.porAñoToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porAñoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porAñoToolStripMenuItem.Text = "Por Año";
             this.porAñoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su año";
             // 
             // porTipoToolStripMenuItem
             // 
             this.porTipoToolStripMenuItem.Name = "porTipoToolStripMenuItem";
-            this.porTipoToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porTipoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porTipoToolStripMenuItem.Text = "Por Tipo";
             this.porTipoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su tipo";
             // 
             // porKilometrajeToolStripMenuItem
             // 
             this.porKilometrajeToolStripMenuItem.Name = "porKilometrajeToolStripMenuItem";
-            this.porKilometrajeToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porKilometrajeToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porKilometrajeToolStripMenuItem.Text = "Por Kilometraje";
             this.porKilometrajeToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su kilometraje";
             // 
             // porFechaDeIngresoToolStripMenuItem
             // 
             this.porFechaDeIngresoToolStripMenuItem.Name = "porFechaDeIngresoToolStripMenuItem";
-            this.porFechaDeIngresoToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porFechaDeIngresoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porFechaDeIngresoToolStripMenuItem.Text = "Por Fecha de ingreso";
             this.porFechaDeIngresoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su fecha de ingreso";
             // 
             // porPrecioToolStripMenuItem
             // 
             this.porPrecioToolStripMenuItem.Name = "porPrecioToolStripMenuItem";
-            this.porPrecioToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porPrecioToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porPrecioToolStripMenuItem.Text = "Por Precio";
             this.porPrecioToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su precio";
             // 
@@ -323,15 +324,16 @@ namespace CapaPresentacion
             this.porTeléfonoToolStripMenuItem});
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // datosGeneralesToolStripMenuItem1
             // 
             this.datosGeneralesToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("datosGeneralesToolStripMenuItem1.Image")));
             this.datosGeneralesToolStripMenuItem1.Name = "datosGeneralesToolStripMenuItem1";
-            this.datosGeneralesToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.datosGeneralesToolStripMenuItem1.Size = new System.Drawing.Size(304, 34);
+            this.datosGeneralesToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.C)));
+            this.datosGeneralesToolStripMenuItem1.Size = new System.Drawing.Size(338, 34);
             this.datosGeneralesToolStripMenuItem1.Text = "Datos &Generales";
             this.datosGeneralesToolStripMenuItem1.ToolTipText = "Visualizar e imprimir información general de clientes";
             this.datosGeneralesToolStripMenuItem1.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem1_Click);
@@ -339,28 +341,28 @@ namespace CapaPresentacion
             // porEstadoToolStripMenuItem
             // 
             this.porEstadoToolStripMenuItem.Name = "porEstadoToolStripMenuItem";
-            this.porEstadoToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porEstadoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porEstadoToolStripMenuItem.Text = "Por Estado";
             this.porEstadoToolStripMenuItem.ToolTipText = "Visualizar e imprimir Clientes por su estado";
             // 
             // porNombreToolStripMenuItem
             // 
             this.porNombreToolStripMenuItem.Name = "porNombreToolStripMenuItem";
-            this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porNombreToolStripMenuItem.Text = "Por Nombre";
             this.porNombreToolStripMenuItem.ToolTipText = "Visualizar e imprimir clientes por su nombre";
             // 
             // porDirecciónToolStripMenuItem
             // 
             this.porDirecciónToolStripMenuItem.Name = "porDirecciónToolStripMenuItem";
-            this.porDirecciónToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porDirecciónToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porDirecciónToolStripMenuItem.Text = "Por Dirección";
             this.porDirecciónToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su Dirección";
             // 
             // porTeléfonoToolStripMenuItem
             // 
             this.porTeléfonoToolStripMenuItem.Name = "porTeléfonoToolStripMenuItem";
-            this.porTeléfonoToolStripMenuItem.Size = new System.Drawing.Size(304, 34);
+            this.porTeléfonoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
             this.porTeléfonoToolStripMenuItem.Text = "Por Teléfono";
             this.porTeléfonoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su Telefono";
             // 
@@ -375,7 +377,7 @@ namespace CapaPresentacion
             this.porRolToolStripMenuItem});
             this.empleadoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("empleadoToolStripMenuItem1.Image")));
             this.empleadoToolStripMenuItem1.Name = "empleadoToolStripMenuItem1";
-            this.empleadoToolStripMenuItem1.Size = new System.Drawing.Size(194, 34);
+            this.empleadoToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.empleadoToolStripMenuItem1.Text = "Empleado";
             // 
             // datosGeneralesToolStripMenuItem2
@@ -430,7 +432,7 @@ namespace CapaPresentacion
             this.nombreDeUsuarioToolStripMenuItem});
             this.uusariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("uusariosToolStripMenuItem.Image")));
             this.uusariosToolStripMenuItem.Name = "uusariosToolStripMenuItem";
-            this.uusariosToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
+            this.uusariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.uusariosToolStripMenuItem.Text = "Usuarios";
             // 
             // datosGeneralesToolStripMenuItem3
@@ -470,7 +472,7 @@ namespace CapaPresentacion
             this.porCondiciónToolStripMenuItem});
             this.ventasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ventasToolStripMenuItem.Image")));
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // datosGeneralesToolStripMenuItem4
@@ -627,7 +629,7 @@ namespace CapaPresentacion
             this.contenidoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("contenidoToolStripMenuItem.Image")));
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
             this.contenidoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
             this.contenidoToolStripMenuItem.Text = "Contenido";
             this.contenidoToolStripMenuItem.ToolTipText = "Mostrar la ayuda del sistema";
             // 
@@ -635,7 +637,7 @@ namespace CapaPresentacion
             // 
             this.acercaDeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaDeToolStripMenuItem.Image")));
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
             this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             this.acercaDeToolStripMenuItem.ToolTipText = "Mostrar información sobre el sistema";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
@@ -682,12 +684,15 @@ namespace CapaPresentacion
             // 
             // panelDesktop
             // 
+            this.panelDesktop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktop.BackgroundImage")));
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(0, 40);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1189, 568);
             this.panelDesktop.TabIndex = 2;
             this.panelDesktop.Visible = false;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // FMenu
             // 

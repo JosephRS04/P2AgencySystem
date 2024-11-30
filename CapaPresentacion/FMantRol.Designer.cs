@@ -244,6 +244,7 @@ namespace CapaPresentacion
             this.bmenu.Text = "Salir";
             this.bmenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bmenu.UseVisualStyleBackColor = true;
+            this.bmenu.Click += new System.EventHandler(this.bmenu_Click);
             // 
             // bCancelar
             // 

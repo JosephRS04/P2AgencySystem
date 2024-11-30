@@ -72,7 +72,7 @@ namespace CapaPresentacion
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(207, 138);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Christopher\r\nSeveriano\r\n2021-1163";
+            this.label3.Text = "Christopher\r\nSeveriano\r\n20211163";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4

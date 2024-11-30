@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using CapaNegocios;
 
 namespace CapaPresentacion
@@ -139,8 +142,9 @@ namespace CapaPresentacion
             }
         } //Fin del método RecuperarDatos
 
-
-
-
+        private void bmenu_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

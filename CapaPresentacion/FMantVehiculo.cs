@@ -88,7 +88,7 @@ namespace CapaPresentacion
 
         private void bmenu_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible = false;
         }
 
         private void bAgregar_Click(object sender, EventArgs e)

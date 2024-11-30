@@ -16,5 +16,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void bmenu_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

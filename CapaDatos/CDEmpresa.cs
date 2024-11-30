@@ -107,11 +107,11 @@ namespace CapaDatos
                Set.
                 */
                 micomando.Parameters.AddWithValue("@pNombreEmp", objEmpresa.NombreEmp);
+                micomando.Parameters.AddWithValue("@pRNC", objEmpresa.RNC);
                 micomando.Parameters.AddWithValue("@pDireccion", objEmpresa.Direccion);
                 micomando.Parameters.AddWithValue("@pTelefono", objEmpresa.Telefono);
-                micomando.Parameters.AddWithValue("@pCorreo", objEmpresa.Correo);
-                micomando.Parameters.AddWithValue("@pRNC", objEmpresa.RNC);
                 micomando.Parameters.AddWithValue("@pSlogan", objEmpresa.Slogan);
+                micomando.Parameters.AddWithValue("@pCorreo", objEmpresa.Correo);
                 micomando.Parameters.AddWithValue("@pGerente", objEmpresa.Gerente);
 
                 //hasta aquí el pase de parámetros
@@ -151,11 +151,11 @@ namespace CapaDatos
 
                 micomando.Parameters.AddWithValue("@pIdEmpresa", objEmpresa.IdEmpresa);
                 micomando.Parameters.AddWithValue("@pNombreEmp", objEmpresa.NombreEmp);
+                micomando.Parameters.AddWithValue("@pRNC", objEmpresa.RNC);
                 micomando.Parameters.AddWithValue("@pDireccion", objEmpresa.Direccion);
                 micomando.Parameters.AddWithValue("@pTelefono", objEmpresa.Telefono);
-                micomando.Parameters.AddWithValue("@pCorreo", objEmpresa.Correo);
                 micomando.Parameters.AddWithValue("@pSlogan", objEmpresa.Slogan);
-                micomando.Parameters.AddWithValue("@pRNC", objEmpresa.RNC);
+                micomando.Parameters.AddWithValue("@pCorreo", objEmpresa.Correo);
                 micomando.Parameters.AddWithValue("@pGerente", objEmpresa.Gerente);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Datos actualizados correctamente!" :

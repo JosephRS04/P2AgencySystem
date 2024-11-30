@@ -56,8 +56,7 @@ namespace CapaPresentacion
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bmenu = new System.Windows.Forms.Button();
-            this.bCancelar = new System.Windows.Forms.Button();
-            this.bEditar = new System.Windows.Forms.Button();
+            this.bBorrar = new System.Windows.Forms.Button();
             this.bGuardar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
             this.PTitulo.SuspendLayout();
@@ -98,6 +97,7 @@ namespace CapaPresentacion
             this.tbIdEmpresa.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIdEmpresa.Location = new System.Drawing.Point(22, 121);
             this.tbIdEmpresa.Name = "tbIdEmpresa";
+            this.tbIdEmpresa.ReadOnly = true;
             this.tbIdEmpresa.Size = new System.Drawing.Size(531, 44);
             this.tbIdEmpresa.TabIndex = 71;
             // 
@@ -299,8 +299,7 @@ namespace CapaPresentacion
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.bmenu);
-            this.panel3.Controls.Add(this.bCancelar);
-            this.panel3.Controls.Add(this.bEditar);
+            this.panel3.Controls.Add(this.bBorrar);
             this.panel3.Controls.Add(this.bGuardar);
             this.panel3.Controls.Add(this.bAgregar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -323,34 +322,22 @@ namespace CapaPresentacion
             this.bmenu.Text = "Salir";
             this.bmenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bmenu.UseVisualStyleBackColor = true;
+            this.bmenu.Click += new System.EventHandler(this.bmenu_Click);
             // 
-            // bCancelar
+            // bBorrar
             // 
-            this.bCancelar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bCancelar.Image = ((System.Drawing.Image)(resources.GetObject("bCancelar.Image")));
-            this.bCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bCancelar.Location = new System.Drawing.Point(538, 3);
-            this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(185, 73);
-            this.bCancelar.TabIndex = 3;
-            this.bCancelar.Text = "Cancelar";
-            this.bCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bCancelar.UseVisualStyleBackColor = true;
-            // 
-            // bEditar
-            // 
-            this.bEditar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bEditar.Image = ((System.Drawing.Image)(resources.GetObject("bEditar.Image")));
-            this.bEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bEditar.Location = new System.Drawing.Point(362, 3);
-            this.bEditar.Name = "bEditar";
-            this.bEditar.Size = new System.Drawing.Size(170, 73);
-            this.bEditar.TabIndex = 2;
-            this.bEditar.Text = "Editar";
-            this.bEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bEditar.UseVisualStyleBackColor = true;
+            this.bBorrar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bBorrar.Image = ((System.Drawing.Image)(resources.GetObject("bBorrar.Image")));
+            this.bBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bBorrar.Location = new System.Drawing.Point(362, 3);
+            this.bBorrar.Name = "bBorrar";
+            this.bBorrar.Size = new System.Drawing.Size(185, 73);
+            this.bBorrar.TabIndex = 3;
+            this.bBorrar.Text = "Borrar";
+            this.bBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bBorrar.UseVisualStyleBackColor = true;
+            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click);
             // 
             // bGuardar
             // 
@@ -365,6 +352,7 @@ namespace CapaPresentacion
             this.bGuardar.Text = "Guardar";
             this.bGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bGuardar.UseVisualStyleBackColor = true;
+            this.bGuardar.Click += new System.EventHandler(this.bGuardar_Click);
             // 
             // bAgregar
             // 
@@ -378,9 +366,10 @@ namespace CapaPresentacion
             this.bAgregar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bAgregar.Size = new System.Drawing.Size(170, 73);
             this.bAgregar.TabIndex = 0;
-            this.bAgregar.Text = "Agregar";
+            this.bAgregar.Text = "Editar";
             this.bAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // FMantEmpresa
             // 
@@ -411,6 +400,8 @@ namespace CapaPresentacion
             this.Controls.Add(this.tbCorreo);
             this.Name = "FMantEmpresa";
             this.Text = "FMantEmpresa";
+            this.Load += new System.EventHandler(this.FMantEmpresa_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FMantEmpresa_KeyDown);
             this.PTitulo.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -447,8 +438,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button bmenu;
-        private System.Windows.Forms.Button bCancelar;
-        private System.Windows.Forms.Button bEditar;
+        private System.Windows.Forms.Button bBorrar;
         private System.Windows.Forms.Button bGuardar;
         private System.Windows.Forms.Button bAgregar;
     }
