@@ -98,6 +98,12 @@
     <Compile Include="FConsVehiculo.Designer.cs">
       <DependentUpon>FConsVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FConsVentaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsVentaDetalle.Designer.cs">
+      <DependentUpon>FConsVentaDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMantCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,11 +154,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportClientes.Designer.cs">
+      <DependentUpon>ReportClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportVehiculos.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReportVehiculos.Designer.cs">
       <DependentUpon>ReportVehiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportVentaDetalle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportVentaDetalle.Designer.cs">
+      <DependentUpon>ReportVentaDetalle.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FAcercaDe.resx">
       <DependentUpon>FAcercaDe.cs</DependentUpon>
@@ -168,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConsVehiculo.resx">
       <DependentUpon>FConsVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsVentaDetalle.resx">
+      <DependentUpon>FConsVentaDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMantCliente.resx">
       <DependentUpon>FMantCliente.cs</DependentUpon>
@@ -203,8 +224,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportClientes.resx">
+      <DependentUpon>ReportClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportVehiculos.resx">
       <DependentUpon>ReportVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportVentaDetalle.resx">
+      <DependentUpon>ReportVentaDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

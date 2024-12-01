@@ -11,11 +11,19 @@ using CapaNegocios;
 
 namespace CapaPresentacion
 {
-    public partial class FConsVehiculo : Form
+    public partial class FConsVentaDetalle : Form
     {
-        public int vidVehiculo = 0, vtieneparametro = 0, indice = 1;
+        public int vidVentaDetalle = 0, vtieneparametro = 0, indice = 1;
         public string valorparametro = "", mensaje = "";
-        CNVehiculo objVehiculo = new CNVehiculo();
+        CNVentaDetalle objVentaDetalle = new CNVentaDetalle();
+
+        private void FConsVentaDetalle_Load(object sender, EventArgs e)
+        {
+            valorparametro = "";
+            vtieneparametro = 0;
+            MostrarDatos();
+            tbBuscar.Focus();
+        }
 
         private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
         {
@@ -25,7 +33,7 @@ namespace CapaPresentacion
 
         private void bSalir_Click(object sender, EventArgs e)
         {
-            this.Visible = false; 
+            this.Visible = false;
         }
 
         private void bBuscar_Click(object sender, EventArgs e)
@@ -60,12 +68,13 @@ namespace CapaPresentacion
             {
                 indice = indice - 1;
                 DGVDatos.CurrentCell =
-                DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
+                                                   DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
             }
         }
 
         private void bSiguiente_Click(object sender, EventArgs e)
         {
+            if (indice < this.DGVDatos.RowCount - 1)    //Si no estamos al final del DataGridView, avanzamos 1 fila 
             {
                 indice++;
                 DGVDatos.CurrentCell =
@@ -85,35 +94,30 @@ namespace CapaPresentacion
 
         private void bImprimir_Click(object sender, EventArgs e)
         {
-            ReportVehiculos report = new ReportVehiculos();
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {        
-                string rutaGuardar = saveFileDialog1.FileName;
-                
-                
-                report.ExportToPdf(rutaGuardar+".pdf");
-                rutaGuardar = "";
+            ReportVentaDetalle report = new ReportVentaDetalle();
+            if (DGVDatos.CurrentRow != null) //Si el DataGridView no está vacío 
+            {
+                Program.vidVentaDetalle = Convert.ToInt32(DGVDatos.CurrentRow.Cells[0].Value);
+
+                valorparametro = tbBuscar.Text.Trim();
+
+                report.DataSource = objVentaDetalle.ObtenerVentaDetalle(valorparametro);
             }
 
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string rutaGuardar = saveFileDialog1.FileName;
+                report.RequestParameters = false;
 
+                report.ExportToPdf(rutaGuardar + ".pdf");
+            }
         }
 
-        private void DGVDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        CNVentaDetalle objVehiculo = new CNVentaDetalle();
 
-        }
-
-        public FConsVehiculo()
+        public FConsVentaDetalle()
         {
             InitializeComponent();
-        }
-
-        private void FConsVehiculo_Load(object sender, EventArgs e)
-        {
-            valorparametro = "";
-            vtieneparametro = 0;
-            MostrarDatos();
-            tbBuscar.Focus();
         }
 
         private void MostrarDatos()
@@ -121,33 +125,28 @@ namespace CapaPresentacion
             // Se toma el texto que se haya introducido en el textbox para usarlo como parámetro 
             valorparametro = tbBuscar.Text.Trim();
             //Si el procedimiento almacenado devuelve algún valor se ajusta el ancho de las columnas del DataGridView 
-            if (objVehiculo.ObtenerVehiculo(valorparametro) != null)
+            if (objVentaDetalle.ObtenerVentaDetalle(valorparametro) != null)
             {
-                DGVDatos.DataSource = objVehiculo.ObtenerVehiculo(valorparametro); //Se ejecuta el método para mostrar los datos
-                DGVDatos.Columns[0].Width = 80;    //IDVehiculo 
-                DGVDatos.Columns[1].Width = 100;   //VIN
-                DGVDatos.Columns[2].Width = 225;  //Marca
-                DGVDatos.Columns[3].Width = 100;  //Modelo
-                DGVDatos.Columns[4].Width = 125;  //Ano
-                DGVDatos.Columns[5].Width = 125;  //Tipo
-                DGVDatos.Columns[6].Width = 150;  //Kilometraje
-                DGVDatos.Columns[7].Width = 100;  //FechaIngreso
-                DGVDatos.Columns[8].Width = 100;  //Informaciones
-                DGVDatos.Columns[9].Width = 100;  //Existencia
-                DGVDatos.Columns[10].Width = 100;  //Precio
-                DGVDatos.Columns[11].Width = 90;   //Estado 
+                DGVDatos.DataSource = objVentaDetalle.ObtenerVentaDetalle(valorparametro);
+                DGVDatos.Columns[0].Width = 80;    //IDVentaDetalle
+                DGVDatos.Columns[1].Width = 200;   //NumeroRecibo
+                DGVDatos.Columns[2].Width = 225;  //IdVehiculo
+                DGVDatos.Columns[3].Width = 100;  //Precio
+                DGVDatos.Columns[4].Width = 125;  //Cantidad 
+                DGVDatos.Columns[5].Width = 125;  //Unidad
             }
             else           //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro 
             {
                 MessageBox.Show("No se retornó ningún valor!");
             }
             DGVDatos.Refresh();       //Se refresca el DataGridView 
-            LCantVehiculo.Text = "Cantidad de vehiculos: " + Convert.ToString(DGVDatos.RowCount);  //Se muestra la cantidad de datos 
+            LCantVentaDetalle.Text = "Cantidad de facturas: " + Convert.ToString(DGVDatos.RowCount);  //Se muestra la cantidad de datos 
             if (DGVDatos.RowCount <= 0)                                           //Si no se obtienen datos de retorno 
             {
                 MessageBox.Show("Ningún dato que mostrar!");   //Se muestra un mensaje de error 
             }
         }  //Fin del método mostrar
+
 
     }
 }

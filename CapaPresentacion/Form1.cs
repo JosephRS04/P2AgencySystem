@@ -20,6 +20,7 @@ namespace CapaPresentacion
         Form formEmpleado;
         Form formRol;
         Form formVenta;
+        Form formVentaDetalle;
 
         public FMenu()
         {
@@ -233,6 +234,20 @@ namespace CapaPresentacion
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void datosGeneralesToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            if (formVentaDetalle != null)
+            {
+                formVentaDetalle.BringToFront();
+                formVentaDetalle.Show();
+            }
+            else
+            {
+                formVentaDetalle = new FConsVentaDetalle();
+                openChildForm(formVentaDetalle);
+            }
         }
     }
 }

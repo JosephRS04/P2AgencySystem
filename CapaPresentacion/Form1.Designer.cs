@@ -97,6 +97,8 @@ namespace CapaPresentacion
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datosGeneralesToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -231,7 +233,8 @@ namespace CapaPresentacion
             this.clientesToolStripMenuItem,
             this.empleadoToolStripMenuItem1,
             this.uusariosToolStripMenuItem,
-            this.ventasToolStripMenuItem});
+            this.ventasToolStripMenuItem,
+            this.facturasToolStripMenuItem});
             this.consultasYReportesToolStripMenuItem.Name = "consultasYReportesToolStripMenuItem";
             this.consultasYReportesToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
             this.consultasYReportesToolStripMenuItem.Text = "Consultas y &Reportes";
@@ -547,7 +550,7 @@ namespace CapaPresentacion
             // 
             this.editorDeTextosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editorDeTextosToolStripMenuItem.Image")));
             this.editorDeTextosToolStripMenuItem.Name = "editorDeTextosToolStripMenuItem";
-            this.editorDeTextosToolStripMenuItem.Size = new System.Drawing.Size(239, 34);
+            this.editorDeTextosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.editorDeTextosToolStripMenuItem.Text = "&Editor de textos";
             this.editorDeTextosToolStripMenuItem.ToolTipText = "Abrir Microsoft Word";
             this.editorDeTextosToolStripMenuItem.Click += new System.EventHandler(this.editorDeTextosToolStripMenuItem_Click);
@@ -556,7 +559,7 @@ namespace CapaPresentacion
             // 
             this.calculadoraToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calculadoraToolStripMenuItem.Image")));
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(239, 34);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.calculadoraToolStripMenuItem.Text = "&Calculadora";
             this.calculadoraToolStripMenuItem.ToolTipText = "Abrir calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
@@ -565,7 +568,7 @@ namespace CapaPresentacion
             // 
             this.navegadorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("navegadorToolStripMenuItem.Image")));
             this.navegadorToolStripMenuItem.Name = "navegadorToolStripMenuItem";
-            this.navegadorToolStripMenuItem.Size = new System.Drawing.Size(239, 34);
+            this.navegadorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.navegadorToolStripMenuItem.Text = "&Navegador";
             this.navegadorToolStripMenuItem.ToolTipText = "Abrir navegador web";
             this.navegadorToolStripMenuItem.Click += new System.EventHandler(this.navegadorToolStripMenuItem_Click);
@@ -694,6 +697,22 @@ namespace CapaPresentacion
             this.panelDesktop.Visible = false;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
+            // facturasToolStripMenuItem
+            // 
+            this.facturasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.datosGeneralesToolStripMenuItem5});
+            this.facturasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturasToolStripMenuItem.Image")));
+            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.facturasToolStripMenuItem.Text = "Facturas";
+            // 
+            // datosGeneralesToolStripMenuItem5
+            // 
+            this.datosGeneralesToolStripMenuItem5.Name = "datosGeneralesToolStripMenuItem5";
+            this.datosGeneralesToolStripMenuItem5.Size = new System.Drawing.Size(270, 34);
+            this.datosGeneralesToolStripMenuItem5.Text = "Datos Generales";
+            this.datosGeneralesToolStripMenuItem5.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem5_Click);
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
@@ -792,6 +811,8 @@ namespace CapaPresentacion
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem datosGeneralesToolStripMenuItem5;
     }
 }
 
