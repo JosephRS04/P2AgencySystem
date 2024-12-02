@@ -364,6 +364,7 @@ namespace CapaPresentacion
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
@@ -374,7 +375,6 @@ namespace CapaPresentacion
             this.cbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbEstado.Size = new System.Drawing.Size(531, 44);
             this.cbEstado.TabIndex = 44;
-            this.cbEstado.Text = "Activo";
             // 
             // label9
             // 

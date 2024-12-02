@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using CapaNegocios;
 
 namespace CapaPresentacion
@@ -126,9 +129,6 @@ namespace CapaPresentacion
                 cbEstado.Text = row["Estado"].ToString();
             }
 
-
-
-
         }// fin metodo recuperar datos
 
         private void tbIdEmpleado_TextChanged(object sender, EventArgs e)
@@ -168,8 +168,8 @@ namespace CapaPresentacion
 
         private void bBuscar_Click_1(object sender, EventArgs e)
         {
-            //FBuscarDepartamento fBuscarDepto = new FBuscarDepartamento(); 
-            //fBuscarDepto.ShowDialog(); 
+            FBuscarEmpleado fBuscarempleado = new FBuscarEmpleado(); 
+            fBuscarempleado.ShowDialog(); 
             if (Program.modificar)
             {
                 RecuperaDatos();  //Llamo al método para recuperar el Depto seleccionado 
@@ -185,6 +185,11 @@ namespace CapaPresentacion
         private void bmenu_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void bGuardar_Click_1(object sender, EventArgs e)

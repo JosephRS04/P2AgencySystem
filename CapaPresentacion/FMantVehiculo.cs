@@ -174,9 +174,6 @@ namespace CapaPresentacion
                 cbEstado.Text = row["Estado"].ToString();
             }
 
-
-
-
         }// fin metodo recuperar datos
 
         private void tbIdVehiculo_TextChanged(object sender, EventArgs e)

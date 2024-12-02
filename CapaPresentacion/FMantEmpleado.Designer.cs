@@ -252,6 +252,7 @@ namespace CapaPresentacion
             this.cbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbEstado.Size = new System.Drawing.Size(531, 44);
             this.cbEstado.TabIndex = 47;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // bBuscar
             // 

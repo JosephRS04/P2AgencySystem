@@ -18,7 +18,7 @@ namespace CapaDatos
 
         public CDEmpleado() { }
 
-        public CDEmpleado( int pIdEmpleado, string pNombre, string pApellido, DateTime pFechaNacimiento, int pIdRol, string pTelefono, string pEstado)
+        public CDEmpleado( int pIdEmpleado, string pNombre, string pApellido, string pTelefono, DateTime pFechaNacimiento, int pIdRol, string pEstado)
 
         {
             dIdEmpleado = pIdEmpleado;
@@ -94,8 +94,8 @@ namespace CapaDatos
                 micomando.Parameters.AddWithValue("@pApellido", objEmpleado.Apellido);
                 micomando.Parameters.AddWithValue("@pTelefono", objEmpleado.Telefono);
                 micomando.Parameters.AddWithValue("@pFechaNacimiento", objEmpleado.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pEstado", objEmpleado.Estado);
                 micomando.Parameters.AddWithValue("@pIdRol", objEmpleado.IdRol);
+                micomando.Parameters.AddWithValue("@pEstado", objEmpleado.Estado);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente" : "No se pudo insertar los datos";
             }
@@ -130,8 +130,8 @@ namespace CapaDatos
                 micomando.Parameters.AddWithValue("@pApellido", objEmpleado.Apellido);
                 micomando.Parameters.AddWithValue("@pTelefono", objEmpleado.Telefono);
                 micomando.Parameters.AddWithValue("@pFechaNacimiento", objEmpleado.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pEstado", objEmpleado.Estado);
                 micomando.Parameters.AddWithValue("@pIdRol", objEmpleado.IdRol);
+                micomando.Parameters.AddWithValue("@pEstado", objEmpleado.Estado);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "actualización de datos completada correctamente" : "No se pudo actualizar los datos";
             }

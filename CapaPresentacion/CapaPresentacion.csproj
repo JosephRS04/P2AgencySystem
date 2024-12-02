@@ -80,6 +80,12 @@
     <Compile Include="FBuscarCliente.Designer.cs">
       <DependentUpon>FBuscarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FBuscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBuscarEmpleado.Designer.cs">
+      <DependentUpon>FBuscarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FBuscarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     </Compile>
     <Compile Include="FConsVehiculo.Designer.cs">
       <DependentUpon>FConsVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FConsVentaCabecera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsVentaCabecera.Designer.cs">
+      <DependentUpon>FConsVentaCabecera.cs</DependentUpon>
     </Compile>
     <Compile Include="FConsVentaDetalle.cs">
       <SubType>Form</SubType>
@@ -166,6 +178,12 @@
     <Compile Include="ReportVehiculos.Designer.cs">
       <DependentUpon>ReportVehiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportVentaCabecera.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportVentaCabecera.Designer.cs">
+      <DependentUpon>ReportVentaCabecera.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportVentaDetalle.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -178,6 +196,9 @@
     <EmbeddedResource Include="FBuscarCliente.resx">
       <DependentUpon>FBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FBuscarEmpleado.resx">
+      <DependentUpon>FBuscarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FBuscarVehiculo.resx">
       <DependentUpon>FBuscarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConsVehiculo.resx">
       <DependentUpon>FConsVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsVentaCabecera.resx">
+      <DependentUpon>FConsVentaCabecera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FConsVentaDetalle.resx">
       <DependentUpon>FConsVentaDetalle.cs</DependentUpon>
@@ -229,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportVehiculos.resx">
       <DependentUpon>ReportVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportVentaCabecera.resx">
+      <DependentUpon>ReportVentaCabecera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportVentaDetalle.resx">
       <DependentUpon>ReportVentaDetalle.cs</DependentUpon>

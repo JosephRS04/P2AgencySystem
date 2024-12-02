@@ -11,25 +11,33 @@ using CapaNegocios;
 
 namespace CapaPresentacion
 {
-    public partial class FBuscarVehiculo : Form
+    public partial class FBuscarEmpleado : Form
     {
         public int indice = 0, vtieneparametro = 0;
         public string valorparametro = "";
-        CNVehiculo cNVehiculo = new CNVehiculo();
+        CNEmpleado cNEmpleado = new CNEmpleado();
 
-
-        public FBuscarVehiculo()
+        public FBuscarEmpleado()
         {
             InitializeComponent();
         }
 
-        private void FBuscarVehiculo_Load(object sender, EventArgs e)
+        private void FBuscarEmpleado_Load(object sender, EventArgs e)
         {
             valorparametro = "";
             vtieneparametro = 0;
-            Program.vidVehiculo = 0;  //variable global que tomará el valor seleccionado 
+            Program.vidEmpleado = 0;  //variable global que tomará el valor seleccionado 
             MostrarDatos();               //Llamo al Método que llena el DataGrid 
             tbBuscar.Focus();
+        }
+
+        private void DGVDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!(e.RowIndex > -1))
+            {
+                return;
+            }
+            bAceptar_Click(sender, e);
         }
 
         private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
@@ -49,7 +57,7 @@ namespace CapaPresentacion
             if (DGVDatos.CurrentRow != null) //Si el DataGridView no está vacío 
             {
                 Program.modificar = true;
-                Program.vidVehiculo = Convert.ToInt32(DGVDatos.CurrentRow.Cells[0].Value);
+                Program.vidEmpleado = Convert.ToInt32(DGVDatos.CurrentRow.Cells[0].Value);
             }
             Close();
         }
@@ -61,6 +69,7 @@ namespace CapaPresentacion
                 indice = 0;
                 DGVDatos.CurrentCell = DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
             }
+
         }
 
         private void bAnterior_Click(object sender, EventArgs e)
@@ -81,6 +90,7 @@ namespace CapaPresentacion
                 DGVDatos.CurrentCell =
                 DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
             }
+
         }
 
         private void bUltimo_Click(object sender, EventArgs e)
@@ -91,15 +101,6 @@ namespace CapaPresentacion
                 DGVDatos.CurrentCell =
                 DGVDatos.Rows[indice].Cells[DGVDatos.CurrentCell.ColumnIndex];
             }
-        }
-
-        private void DGVDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (!(e.RowIndex > -1))
-            {
-                return;
-            }
-            bAceptar_Click(sender, e);
         }
 
         private void bBuscar_Click(object sender, EventArgs e)
@@ -115,37 +116,29 @@ namespace CapaPresentacion
                 vtieneparametro = 0; //se indica que no se trabajará con parámetros 
                 valorparametro = ""; //Se vuelve vacío la variable del parámetro. 
             }
-            MostrarDatos(); //Se llama al método MostrarDatos        
+            MostrarDatos();
         }
+
 
         private void MostrarDatos()
         {
             valorparametro = tbBuscar.Text.Trim();
-            if (cNVehiculo.ObtenerVehiculo(valorparametro) != null)
+            if (cNEmpleado.ObtenerEmpleado(valorparametro) != null)
             {
-                DGVDatos.DataSource = cNVehiculo.ObtenerVehiculo(valorparametro); //Se ejecuta el método para mostrar los datos
-                DGVDatos.Columns[0].Width = 30;  //IDVehiculo 
-                DGVDatos.Columns[1].Width = 120; //VIN
-                DGVDatos.Columns[2].Width = 70;  //Marca
-                DGVDatos.Columns[3].Width = 70;  //Modelo
-                DGVDatos.Columns[4].Width = 50;  //Ano
-                DGVDatos.Columns[5].Width = 60;  //Tipo
-                DGVDatos.Columns[6].Width = 80;  //Kilometraje
-                DGVDatos.Columns[7].Width = 100; //FechaIngreso
-                DGVDatos.Columns[8].Width = 200; //Informaciones
-                DGVDatos.Columns[9].Width = 40;  //Existencia
-                DGVDatos.Columns[10].Width = 100;//Precio
-                DGVDatos.Columns[11].Width = 90; //Estado 
+                DGVDatos.DataSource = cNEmpleado.ObtenerEmpleado(valorparametro); //Se ejecuta el método para mostrar los datos
+                DGVDatos.Columns[0].Width = 30;  //IDEmpleado 
+                DGVDatos.Columns[1].Width = 70; //Nombre
+                DGVDatos.Columns[2].Width = 70;  //Apellido
+                DGVDatos.Columns[3].Width = 70;  //Telefono
+                DGVDatos.Columns[4].Width = 70;  //FechaNacimiento
+                DGVDatos.Columns[5].Width = 30;  //IdRol
+                DGVDatos.Columns[6].Width = 30;  //Estado
             }
             else
                 MessageBox.Show("No se retornó ningún valor!");
 
             DGVDatos.Refresh(); //Se refresca el DataGridView 
         } //Fin del método mostrar
-
-
-
-
 
 
     }

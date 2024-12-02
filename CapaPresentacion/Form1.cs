@@ -21,6 +21,7 @@ namespace CapaPresentacion
         Form formRol;
         Form formVenta;
         Form formVentaDetalle;
+        Form formVentaCabecera;
 
         public FMenu()
         {
@@ -247,6 +248,20 @@ namespace CapaPresentacion
             {
                 formVentaDetalle = new FConsVentaDetalle();
                 openChildForm(formVentaDetalle);
+            }
+        }
+
+        private void datosGeneralesToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            if (formVentaCabecera != null)
+            {
+                formVentaCabecera.BringToFront();
+                formVentaCabecera.Show();
+            }
+            else
+            {
+                formVentaCabecera = new FConsVentaCabecera();
+                openChildForm(formVentaCabecera);
             }
         }
     }

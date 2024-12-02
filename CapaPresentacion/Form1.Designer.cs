@@ -81,6 +81,8 @@ namespace CapaPresentacion
             this.porNCFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porTipoDeFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porCondiciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datosGeneralesToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.utilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorDeTextosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,8 +99,6 @@ namespace CapaPresentacion
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.datosGeneralesToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -486,6 +486,7 @@ namespace CapaPresentacion
             this.datosGeneralesToolStripMenuItem4.Size = new System.Drawing.Size(305, 34);
             this.datosGeneralesToolStripMenuItem4.Text = "Datos &Generales";
             this.datosGeneralesToolStripMenuItem4.ToolTipText = "Visualizar e imprimir información general de las Ventas";
+            this.datosGeneralesToolStripMenuItem4.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem4_Click);
             // 
             // porEstadoToolStripMenuItem2
             // 
@@ -535,6 +536,22 @@ namespace CapaPresentacion
             this.porCondiciónToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
             this.porCondiciónToolStripMenuItem.Text = "Por Condición";
             this.porCondiciónToolStripMenuItem.ToolTipText = "Visualizar e imprimir ventas por su condición";
+            // 
+            // facturasToolStripMenuItem
+            // 
+            this.facturasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.datosGeneralesToolStripMenuItem5});
+            this.facturasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturasToolStripMenuItem.Image")));
+            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.facturasToolStripMenuItem.Text = "Facturas";
+            // 
+            // datosGeneralesToolStripMenuItem5
+            // 
+            this.datosGeneralesToolStripMenuItem5.Name = "datosGeneralesToolStripMenuItem5";
+            this.datosGeneralesToolStripMenuItem5.Size = new System.Drawing.Size(242, 34);
+            this.datosGeneralesToolStripMenuItem5.Text = "Datos Generales";
+            this.datosGeneralesToolStripMenuItem5.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem5_Click);
             // 
             // utilidadesToolStripMenuItem
             // 
@@ -696,22 +713,6 @@ namespace CapaPresentacion
             this.panelDesktop.TabIndex = 2;
             this.panelDesktop.Visible = false;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
-            // 
-            // facturasToolStripMenuItem
-            // 
-            this.facturasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datosGeneralesToolStripMenuItem5});
-            this.facturasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturasToolStripMenuItem.Image")));
-            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.facturasToolStripMenuItem.Text = "Facturas";
-            // 
-            // datosGeneralesToolStripMenuItem5
-            // 
-            this.datosGeneralesToolStripMenuItem5.Name = "datosGeneralesToolStripMenuItem5";
-            this.datosGeneralesToolStripMenuItem5.Size = new System.Drawing.Size(270, 34);
-            this.datosGeneralesToolStripMenuItem5.Text = "Datos Generales";
-            this.datosGeneralesToolStripMenuItem5.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem5_Click);
             // 
             // FMenu
             // 
