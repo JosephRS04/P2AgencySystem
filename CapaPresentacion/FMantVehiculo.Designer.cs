@@ -493,8 +493,7 @@ namespace CapaPresentacion
             // 
             // FMantVehiculo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1721, 1013);
             this.Controls.Add(this.tbExistencia);

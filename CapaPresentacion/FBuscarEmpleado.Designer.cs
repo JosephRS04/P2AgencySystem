@@ -88,6 +88,7 @@ namespace CapaPresentacion
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(559, 53);
             this.tbBuscar.TabIndex = 1;
+            this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
             // label3
             // 
@@ -279,7 +280,9 @@ namespace CapaPresentacion
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FBuscarEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FBuscarEmpleado";
             this.Load += new System.EventHandler(this.FBuscarEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();

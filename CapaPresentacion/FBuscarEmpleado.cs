@@ -119,6 +119,10 @@ namespace CapaPresentacion
             MostrarDatos();
         }
 
+        private void tbBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void MostrarDatos()
         {
@@ -126,13 +130,14 @@ namespace CapaPresentacion
             if (cNEmpleado.ObtenerEmpleado(valorparametro) != null)
             {
                 DGVDatos.DataSource = cNEmpleado.ObtenerEmpleado(valorparametro); //Se ejecuta el método para mostrar los datos
-                DGVDatos.Columns[0].Width = 30;  //IDEmpleado 
-                DGVDatos.Columns[1].Width = 70; //Nombre
-                DGVDatos.Columns[2].Width = 70;  //Apellido
-                DGVDatos.Columns[3].Width = 70;  //Telefono
-                DGVDatos.Columns[4].Width = 70;  //FechaNacimiento
-                DGVDatos.Columns[5].Width = 30;  //IdRol
-                DGVDatos.Columns[6].Width = 30;  //Estado
+                DGVDatos.Columns[0].Width = 5;  //IDEmpleado 
+                DGVDatos.Columns[1].Width = 10; //Nombre
+                DGVDatos.Columns[2].Width = 10;  //Apellido
+                DGVDatos.Columns[3].Width = 15;  //Telefono
+                DGVDatos.Columns[4].Width = 15;  //FechaNacimiento
+                DGVDatos.Columns[5].Width = 5;  //IdRol
+                DGVDatos.Columns[6].Width = 5;  //Estado
+                DGVDatos.Columns[7].Width = 15;  //Estado
             }
             else
                 MessageBox.Show("No se retornó ningún valor!");

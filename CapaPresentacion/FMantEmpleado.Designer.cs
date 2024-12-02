@@ -48,7 +48,6 @@ namespace CapaPresentacion
             this.label8 = new System.Windows.Forms.Label();
             this.tbIdRol = new System.Windows.Forms.ComboBox();
             this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.bBuscar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -60,6 +59,7 @@ namespace CapaPresentacion
             this.bEditar = new System.Windows.Forms.Button();
             this.bGuardar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.PTitulo.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -239,21 +239,6 @@ namespace CapaPresentacion
             this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(528, 44);
             this.dateTimePickerFechaNacimiento.TabIndex = 45;
             // 
-            // cbEstado
-            // 
-            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstado.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(21, 556);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbEstado.Size = new System.Drawing.Size(531, 44);
-            this.cbEstado.TabIndex = 47;
-            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
-            // 
             // bBuscar
             // 
             this.bBuscar.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -401,16 +386,31 @@ namespace CapaPresentacion
             this.bAgregar.UseVisualStyleBackColor = true;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click_1);
             // 
+            // cbEstado
+            // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cbEstado.Location = new System.Drawing.Point(17, 555);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbEstado.Size = new System.Drawing.Size(531, 44);
+            this.cbEstado.TabIndex = 52;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // FMantEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1648, 1021);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.bBuscar);
-            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.dateTimePickerFechaNacimiento);
             this.Controls.Add(this.tbIdRol);
             this.Controls.Add(this.label8);
@@ -460,7 +460,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox tbIdRol;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaNacimiento;
-        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -472,5 +471,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button bEditar;
         private System.Windows.Forms.Button bGuardar;
         private System.Windows.Forms.Button bAgregar;
+        private System.Windows.Forms.ComboBox cbEstado;
     }
 }

@@ -38,7 +38,7 @@ namespace CapaNegocios
             return objUsuario.Actualizar(objUsuario);
         }
 
-        public DataTable ObtenerCliente(string parametro)
+        public DataTable ObtenerUsuario(string parametro)
         {
             CDUsuario objUsuario = new CDUsuario();
             DataTable dt = new DataTable();

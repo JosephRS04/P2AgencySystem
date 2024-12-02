@@ -192,6 +192,11 @@ namespace CapaPresentacion
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void bGuardar_Click_1(object sender, EventArgs e)
         {
             if (tbNombre.Text == string.Empty)

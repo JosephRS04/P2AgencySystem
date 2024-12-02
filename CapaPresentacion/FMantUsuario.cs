@@ -137,7 +137,7 @@ namespace CapaPresentacion
             string vparametro = Program.vidUsuario.ToString();
             CNUsuario cNUsuario = new CNUsuario();
             DataTable dt = new DataTable();
-            dt = cNUsuario.ObtenerCliente(vparametro);
+            dt = cNUsuario.ObtenerUsuario(vparametro);
             foreach (DataRow row in dt.Rows)
             {
                 tbIdUsuario.Text = row["IdUsuario"].ToString();
