@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacion
 {
-    partial class FBuscarEmpleado
+    partial class FBuscarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBuscarEmpleado));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBuscarUsuario));
             this.DGVDatos = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tbBuscar = new System.Windows.Forms.TextBox();
@@ -38,10 +38,11 @@ namespace CapaPresentacion
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.PTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.bCancelar = new System.Windows.Forms.Button();
             this.bAceptar = new System.Windows.Forms.Button();
-            this.PTitulo = new System.Windows.Forms.Panel();
             this.bUltimo = new System.Windows.Forms.Button();
             this.bSiguiente = new System.Windows.Forms.Button();
             this.bAnterior = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@ namespace CapaPresentacion
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel5.SuspendLayout();
             this.PTitulo.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGVDatos
@@ -62,10 +64,9 @@ namespace CapaPresentacion
             this.DGVDatos.RowHeadersWidth = 62;
             this.DGVDatos.RowTemplate.Height = 28;
             this.DGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDatos.Size = new System.Drawing.Size(1711, 789);
-            this.DGVDatos.TabIndex = 87;
+            this.DGVDatos.Size = new System.Drawing.Size(1698, 786);
+            this.DGVDatos.TabIndex = 77;
             this.DGVDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDatos_CellContentClick);
-            this.DGVDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDatos_CellDoubleClick);
             this.DGVDatos.CurrentCellChanged += new System.EventHandler(this.DGVDatos_CurrentCellChanged);
             // 
             // panel5
@@ -79,8 +80,8 @@ namespace CapaPresentacion
             this.panel5.ForeColor = System.Drawing.Color.Coral;
             this.panel5.Location = new System.Drawing.Point(0, 69);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1711, 69);
-            this.panel5.TabIndex = 86;
+            this.panel5.Size = new System.Drawing.Size(1698, 69);
+            this.panel5.TabIndex = 76;
             // 
             // tbBuscar
             // 
@@ -89,17 +90,16 @@ namespace CapaPresentacion
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(559, 53);
             this.tbBuscar.TabIndex = 1;
-            this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(99, 14);
+            this.label3.Location = new System.Drawing.Point(100, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(424, 45);
-            this.label3.TabIndex = 51;
+            this.label3.TabIndex = 50;
             this.label3.Text = "Ingrese el dato a buscar";
             // 
             // bBuscar
@@ -110,22 +110,24 @@ namespace CapaPresentacion
             this.bBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bBuscar.Location = new System.Drawing.Point(1105, -1);
             this.bBuscar.Name = "bBuscar";
-            this.bBuscar.Size = new System.Drawing.Size(245, 62);
+            this.bBuscar.Size = new System.Drawing.Size(317, 62);
             this.bBuscar.TabIndex = 49;
-            this.bBuscar.Text = "Buscar Dato   ";
+            this.bBuscar.Text = "Buscar Dato";
             this.bBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscar.UseVisualStyleBackColor = true;
             this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.ForeColor = System.Drawing.Color.Coral;
-            this.panel6.Location = new System.Drawing.Point(-149, 923);
+            this.panel6.Location = new System.Drawing.Point(-149, 922);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(3138, 5);
-            this.panel6.TabIndex = 85;
+            this.panel6.Size = new System.Drawing.Size(2553, 5);
+            this.panel6.TabIndex = 75;
             // 
             // panel7
             // 
@@ -136,8 +138,8 @@ namespace CapaPresentacion
             this.panel7.ForeColor = System.Drawing.Color.Coral;
             this.panel7.Location = new System.Drawing.Point(0, 64);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2604, 5);
-            this.panel7.TabIndex = 84;
+            this.panel7.Size = new System.Drawing.Size(2584, 5);
+            this.panel7.TabIndex = 74;
             // 
             // label2
             // 
@@ -147,9 +149,19 @@ namespace CapaPresentacion
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(13, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(453, 60);
-            this.label2.TabIndex = 83;
-            this.label2.Text = "Busqueda Empleado";
+            this.label2.Size = new System.Drawing.Size(407, 60);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Busqueda Usuario";
+            // 
+            // PTitulo
+            // 
+            this.PTitulo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.PTitulo.Controls.Add(this.panel1);
+            this.PTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PTitulo.Location = new System.Drawing.Point(0, 0);
+            this.PTitulo.Name = "PTitulo";
+            this.PTitulo.Size = new System.Drawing.Size(1698, 69);
+            this.PTitulo.TabIndex = 71;
             // 
             // panel1
             // 
@@ -159,8 +171,25 @@ namespace CapaPresentacion
             this.panel1.ForeColor = System.Drawing.Color.Coral;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1711, 69);
-            this.panel1.TabIndex = 88;
+            this.panel1.Size = new System.Drawing.Size(1698, 69);
+            this.panel1.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.bCancelar);
+            this.panel3.Controls.Add(this.bAceptar);
+            this.panel3.Controls.Add(this.bUltimo);
+            this.panel3.Controls.Add(this.bSiguiente);
+            this.panel3.Controls.Add(this.bAnterior);
+            this.panel3.Controls.Add(this.bPrimero);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.ForeColor = System.Drawing.Color.Coral;
+            this.panel3.Location = new System.Drawing.Point(0, 924);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1698, 83);
+            this.panel3.TabIndex = 72;
             // 
             // bCancelar
             // 
@@ -168,10 +197,10 @@ namespace CapaPresentacion
             this.bCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bCancelar.Image = ((System.Drawing.Image)(resources.GetObject("bCancelar.Image")));
             this.bCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bCancelar.Location = new System.Drawing.Point(1328, 11);
+            this.bCancelar.Location = new System.Drawing.Point(1150, 3);
             this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(185, 73);
-            this.bCancelar.TabIndex = 74;
+            this.bCancelar.Size = new System.Drawing.Size(264, 73);
+            this.bCancelar.TabIndex = 5;
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bCancelar.UseVisualStyleBackColor = true;
@@ -183,29 +212,14 @@ namespace CapaPresentacion
             this.bAceptar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bAceptar.Image = ((System.Drawing.Image)(resources.GetObject("bAceptar.Image")));
             this.bAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bAceptar.Location = new System.Drawing.Point(1519, 11);
+            this.bAceptar.Location = new System.Drawing.Point(1420, 3);
             this.bAceptar.Name = "bAceptar";
-            this.bAceptar.Size = new System.Drawing.Size(170, 73);
-            this.bAceptar.TabIndex = 73;
+            this.bAceptar.Size = new System.Drawing.Size(264, 73);
+            this.bAceptar.TabIndex = 4;
             this.bAceptar.Text = "Aceptar";
             this.bAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAceptar.UseVisualStyleBackColor = true;
             this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
-            // 
-            // PTitulo
-            // 
-            this.PTitulo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.PTitulo.Controls.Add(this.bCancelar);
-            this.PTitulo.Controls.Add(this.bAceptar);
-            this.PTitulo.Controls.Add(this.bUltimo);
-            this.PTitulo.Controls.Add(this.bSiguiente);
-            this.PTitulo.Controls.Add(this.bAnterior);
-            this.PTitulo.Controls.Add(this.bPrimero);
-            this.PTitulo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PTitulo.Location = new System.Drawing.Point(0, 927);
-            this.PTitulo.Name = "PTitulo";
-            this.PTitulo.Size = new System.Drawing.Size(1711, 83);
-            this.PTitulo.TabIndex = 82;
             // 
             // bUltimo
             // 
@@ -213,10 +227,10 @@ namespace CapaPresentacion
             this.bUltimo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bUltimo.Image = ((System.Drawing.Image)(resources.GetObject("bUltimo.Image")));
             this.bUltimo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bUltimo.Location = new System.Drawing.Point(541, 11);
+            this.bUltimo.Location = new System.Drawing.Point(775, 3);
             this.bUltimo.Name = "bUltimo";
-            this.bUltimo.Size = new System.Drawing.Size(185, 73);
-            this.bUltimo.TabIndex = 72;
+            this.bUltimo.Size = new System.Drawing.Size(264, 73);
+            this.bUltimo.TabIndex = 3;
             this.bUltimo.Text = "Ultimo";
             this.bUltimo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bUltimo.UseVisualStyleBackColor = true;
@@ -228,10 +242,10 @@ namespace CapaPresentacion
             this.bSiguiente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bSiguiente.Image = ((System.Drawing.Image)(resources.GetObject("bSiguiente.Image")));
             this.bSiguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bSiguiente.Location = new System.Drawing.Point(365, 11);
+            this.bSiguiente.Location = new System.Drawing.Point(520, 3);
             this.bSiguiente.Name = "bSiguiente";
-            this.bSiguiente.Size = new System.Drawing.Size(170, 73);
-            this.bSiguiente.TabIndex = 71;
+            this.bSiguiente.Size = new System.Drawing.Size(249, 73);
+            this.bSiguiente.TabIndex = 2;
             this.bSiguiente.Text = "Siguiente";
             this.bSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bSiguiente.UseVisualStyleBackColor = true;
@@ -243,10 +257,10 @@ namespace CapaPresentacion
             this.bAnterior.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bAnterior.Image = ((System.Drawing.Image)(resources.GetObject("bAnterior.Image")));
             this.bAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bAnterior.Location = new System.Drawing.Point(189, 11);
+            this.bAnterior.Location = new System.Drawing.Point(265, 3);
             this.bAnterior.Name = "bAnterior";
-            this.bAnterior.Size = new System.Drawing.Size(170, 73);
-            this.bAnterior.TabIndex = 70;
+            this.bAnterior.Size = new System.Drawing.Size(249, 73);
+            this.bAnterior.TabIndex = 1;
             this.bAnterior.Text = "Anterior";
             this.bAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAnterior.UseVisualStyleBackColor = true;
@@ -259,37 +273,37 @@ namespace CapaPresentacion
             this.bPrimero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bPrimero.Image = ((System.Drawing.Image)(resources.GetObject("bPrimero.Image")));
             this.bPrimero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bPrimero.Location = new System.Drawing.Point(13, 10);
+            this.bPrimero.Location = new System.Drawing.Point(10, 3);
             this.bPrimero.Name = "bPrimero";
             this.bPrimero.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bPrimero.Size = new System.Drawing.Size(170, 73);
-            this.bPrimero.TabIndex = 69;
+            this.bPrimero.Size = new System.Drawing.Size(249, 73);
+            this.bPrimero.TabIndex = 0;
             this.bPrimero.Text = "Primero";
             this.bPrimero.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bPrimero.UseVisualStyleBackColor = true;
             this.bPrimero.Click += new System.EventHandler(this.bPrimero_Click);
             // 
-            // FBuscarEmpleado
+            // FBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1711, 1010);
+            this.ClientSize = new System.Drawing.Size(1698, 1007);
             this.Controls.Add(this.DGVDatos);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PTitulo);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FBuscarEmpleado";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FBuscarEmpleado";
-            this.Load += new System.EventHandler(this.FBuscarEmpleado_Load);
+            this.Name = "FBuscarUsuario";
+            this.Text = "FBuscarUsuario";
+            this.Load += new System.EventHandler(this.FBuscarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.PTitulo.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,10 +319,11 @@ namespace CapaPresentacion
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel PTitulo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Button bAceptar;
-        private System.Windows.Forms.Panel PTitulo;
         private System.Windows.Forms.Button bUltimo;
         private System.Windows.Forms.Button bSiguiente;
         private System.Windows.Forms.Button bAnterior;

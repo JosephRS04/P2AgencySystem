@@ -171,6 +171,22 @@ namespace CapaPresentacion
 
         }
 
+        private void bBuscarEmpleado_Click(object sender, EventArgs e)
+        {
+            FBuscarEmpleado fbempleado = new FBuscarEmpleado();
+            fbempleado.ShowDialog();
+            if (Program.modificar)
+            {
+                MostrarEmpleado();
+                tbCantidad.Focus();
+            }
+            else
+            {
+                MessageBox.Show("No eligio ninguna mercancia!");
+                bBuscarEmpleado.Focus();
+            }
+        }
+
         private int ObtenerNumeroRandom()
         {
             HashSet<int> numerosExistentes = new HashSet<int>();
@@ -337,6 +353,19 @@ namespace CapaPresentacion
             {
                 tbIdCliente.Text = row["IdCliente"].ToString();
                 tbCliente.Text = row["Nombre"].ToString()+" "+row["Apellido"].ToString();
+            }
+        }
+
+        private void MostrarEmpleado()
+        {
+            string vparametro = Program.vidEmpleado.ToString();
+            CNEmpleado cNEmpleado = new CNEmpleado();
+            DataTable dt = new DataTable();
+            dt = cNEmpleado.ObtenerEmpleado(vparametro);
+            foreach (DataRow row in dt.Rows)
+            {
+                tbIdEmpleado.Text = row["IdEmpleado"].ToString();
+                tbEmpleado.Text = row["Nombre"].ToString() + " " + row["Apellido"].ToString();
             }
         }
 

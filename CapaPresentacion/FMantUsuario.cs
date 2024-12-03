@@ -118,8 +118,8 @@ namespace CapaPresentacion
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-            //FBuscarDepartamento fBuscarDepto = new FBuscarDepartamento(); 
-            //fBuscarDepto.ShowDialog(); 
+            FBuscarUsuario fBuscarusuario = new FBuscarUsuario(); 
+            fBuscarusuario.ShowDialog(); 
             if (Program.modificar)
             {
                 RecuperaDatos();  //Llamo al método para recuperar el Depto seleccionado 

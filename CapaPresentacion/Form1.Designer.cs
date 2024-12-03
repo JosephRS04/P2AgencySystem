@@ -48,39 +48,14 @@ namespace CapaPresentacion
             this.consultasYReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosGeneralesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porModeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porMdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porAñoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porTipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porKilometrajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porFechaDeIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porPrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosGeneralesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.porEstadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porNombreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porDirecciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porTeléfonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.datosGeneralesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.porNombreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.porTelefonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porTeléfonoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.porFechaDeNacimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porRolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uusariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosGeneralesToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.porEstadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.nombreDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosGeneralesToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.porEstadoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.porFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porNCFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porTipoDeFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porCondiciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosGeneralesToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.utilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,8 +63,6 @@ namespace CapaPresentacion
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.navegadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restaurarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -221,7 +194,7 @@ namespace CapaPresentacion
             // 
             this.facturaciónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturaciónToolStripMenuItem.Image")));
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(203, 34);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             this.facturaciónToolStripMenuItem.ToolTipText = "Registrar las facturas de venta";
             this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
@@ -243,14 +216,7 @@ namespace CapaPresentacion
             // vehiculosToolStripMenuItem
             // 
             this.vehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datosGeneralesToolStripMenuItem,
-            this.porModeloToolStripMenuItem,
-            this.porMdToolStripMenuItem,
-            this.porAñoToolStripMenuItem,
-            this.porTipoToolStripMenuItem,
-            this.porKilometrajeToolStripMenuItem,
-            this.porFechaDeIngresoToolStripMenuItem,
-            this.porPrecioToolStripMenuItem});
+            this.datosGeneralesToolStripMenuItem});
             this.vehiculosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vehiculosToolStripMenuItem.Image")));
             this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
             this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
@@ -267,64 +233,10 @@ namespace CapaPresentacion
             this.datosGeneralesToolStripMenuItem.ToolTipText = "Visualizar e imprimir información general de vehiculos";
             this.datosGeneralesToolStripMenuItem.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem_Click);
             // 
-            // porModeloToolStripMenuItem
-            // 
-            this.porModeloToolStripMenuItem.Name = "porModeloToolStripMenuItem";
-            this.porModeloToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porModeloToolStripMenuItem.Text = "Por Estado";
-            this.porModeloToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su estado";
-            this.porModeloToolStripMenuItem.Click += new System.EventHandler(this.porModeloToolStripMenuItem_Click);
-            // 
-            // porMdToolStripMenuItem
-            // 
-            this.porMdToolStripMenuItem.Name = "porMdToolStripMenuItem";
-            this.porMdToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porMdToolStripMenuItem.Text = "Por Modelo";
-            this.porMdToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su modelo";
-            // 
-            // porAñoToolStripMenuItem
-            // 
-            this.porAñoToolStripMenuItem.Name = "porAñoToolStripMenuItem";
-            this.porAñoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porAñoToolStripMenuItem.Text = "Por Año";
-            this.porAñoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su año";
-            // 
-            // porTipoToolStripMenuItem
-            // 
-            this.porTipoToolStripMenuItem.Name = "porTipoToolStripMenuItem";
-            this.porTipoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porTipoToolStripMenuItem.Text = "Por Tipo";
-            this.porTipoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su tipo";
-            // 
-            // porKilometrajeToolStripMenuItem
-            // 
-            this.porKilometrajeToolStripMenuItem.Name = "porKilometrajeToolStripMenuItem";
-            this.porKilometrajeToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porKilometrajeToolStripMenuItem.Text = "Por Kilometraje";
-            this.porKilometrajeToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su kilometraje";
-            // 
-            // porFechaDeIngresoToolStripMenuItem
-            // 
-            this.porFechaDeIngresoToolStripMenuItem.Name = "porFechaDeIngresoToolStripMenuItem";
-            this.porFechaDeIngresoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porFechaDeIngresoToolStripMenuItem.Text = "Por Fecha de ingreso";
-            this.porFechaDeIngresoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su fecha de ingreso";
-            // 
-            // porPrecioToolStripMenuItem
-            // 
-            this.porPrecioToolStripMenuItem.Name = "porPrecioToolStripMenuItem";
-            this.porPrecioToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porPrecioToolStripMenuItem.Text = "Por Precio";
-            this.porPrecioToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su precio";
-            // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datosGeneralesToolStripMenuItem1,
-            this.porEstadoToolStripMenuItem,
-            this.porNombreToolStripMenuItem,
-            this.porDirecciónToolStripMenuItem,
-            this.porTeléfonoToolStripMenuItem});
+            this.datosGeneralesToolStripMenuItem1});
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
@@ -341,43 +253,10 @@ namespace CapaPresentacion
             this.datosGeneralesToolStripMenuItem1.ToolTipText = "Visualizar e imprimir información general de clientes";
             this.datosGeneralesToolStripMenuItem1.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem1_Click);
             // 
-            // porEstadoToolStripMenuItem
-            // 
-            this.porEstadoToolStripMenuItem.Name = "porEstadoToolStripMenuItem";
-            this.porEstadoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porEstadoToolStripMenuItem.Text = "Por Estado";
-            this.porEstadoToolStripMenuItem.ToolTipText = "Visualizar e imprimir Clientes por su estado";
-            // 
-            // porNombreToolStripMenuItem
-            // 
-            this.porNombreToolStripMenuItem.Name = "porNombreToolStripMenuItem";
-            this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porNombreToolStripMenuItem.Text = "Por Nombre";
-            this.porNombreToolStripMenuItem.ToolTipText = "Visualizar e imprimir clientes por su nombre";
-            // 
-            // porDirecciónToolStripMenuItem
-            // 
-            this.porDirecciónToolStripMenuItem.Name = "porDirecciónToolStripMenuItem";
-            this.porDirecciónToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porDirecciónToolStripMenuItem.Text = "Por Dirección";
-            this.porDirecciónToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su Dirección";
-            // 
-            // porTeléfonoToolStripMenuItem
-            // 
-            this.porTeléfonoToolStripMenuItem.Name = "porTeléfonoToolStripMenuItem";
-            this.porTeléfonoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
-            this.porTeléfonoToolStripMenuItem.Text = "Por Teléfono";
-            this.porTeléfonoToolStripMenuItem.ToolTipText = "Visualizar e imprimir vehiculos por su Telefono";
-            // 
             // empleadoToolStripMenuItem1
             // 
             this.empleadoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datosGeneralesToolStripMenuItem2,
-            this.porNombreToolStripMenuItem1,
-            this.porTelefonoToolStripMenuItem,
-            this.porTeléfonoToolStripMenuItem1,
-            this.porFechaDeNacimientoToolStripMenuItem,
-            this.porRolToolStripMenuItem});
+            this.datosGeneralesToolStripMenuItem2});
             this.empleadoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("empleadoToolStripMenuItem1.Image")));
             this.empleadoToolStripMenuItem1.Name = "empleadoToolStripMenuItem1";
             this.empleadoToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
@@ -392,47 +271,10 @@ namespace CapaPresentacion
             this.datosGeneralesToolStripMenuItem2.Text = "Datos &Generales";
             this.datosGeneralesToolStripMenuItem2.ToolTipText = "Visualizar e imprimir información general de empleados";
             // 
-            // porNombreToolStripMenuItem1
-            // 
-            this.porNombreToolStripMenuItem1.Name = "porNombreToolStripMenuItem1";
-            this.porNombreToolStripMenuItem1.Size = new System.Drawing.Size(310, 34);
-            this.porNombreToolStripMenuItem1.Text = "Por Estado";
-            this.porNombreToolStripMenuItem1.ToolTipText = "Visualizar e imprimir Empleados por su estado";
-            // 
-            // porTelefonoToolStripMenuItem
-            // 
-            this.porTelefonoToolStripMenuItem.Name = "porTelefonoToolStripMenuItem";
-            this.porTelefonoToolStripMenuItem.Size = new System.Drawing.Size(310, 34);
-            this.porTelefonoToolStripMenuItem.Text = "Por Nombre";
-            this.porTelefonoToolStripMenuItem.ToolTipText = "Visualizar e imprimir empleados por su nombre";
-            // 
-            // porTeléfonoToolStripMenuItem1
-            // 
-            this.porTeléfonoToolStripMenuItem1.Name = "porTeléfonoToolStripMenuItem1";
-            this.porTeléfonoToolStripMenuItem1.Size = new System.Drawing.Size(310, 34);
-            this.porTeléfonoToolStripMenuItem1.Text = "Por Teléfono";
-            this.porTeléfonoToolStripMenuItem1.ToolTipText = "Visualizar e imprimir empleados por su teléfono";
-            // 
-            // porFechaDeNacimientoToolStripMenuItem
-            // 
-            this.porFechaDeNacimientoToolStripMenuItem.Name = "porFechaDeNacimientoToolStripMenuItem";
-            this.porFechaDeNacimientoToolStripMenuItem.Size = new System.Drawing.Size(310, 34);
-            this.porFechaDeNacimientoToolStripMenuItem.Text = "Por Fecha de Nacimiento";
-            this.porFechaDeNacimientoToolStripMenuItem.ToolTipText = "Visualizar e imprimir empleados por su fecha de nacimiento";
-            // 
-            // porRolToolStripMenuItem
-            // 
-            this.porRolToolStripMenuItem.Name = "porRolToolStripMenuItem";
-            this.porRolToolStripMenuItem.Size = new System.Drawing.Size(310, 34);
-            this.porRolToolStripMenuItem.Text = "Por Rol";
-            this.porRolToolStripMenuItem.ToolTipText = "Visualizar e imprimir empleados por su rol";
-            // 
             // uusariosToolStripMenuItem
             // 
             this.uusariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datosGeneralesToolStripMenuItem3,
-            this.porEstadoToolStripMenuItem1,
-            this.nombreDeUsuarioToolStripMenuItem});
+            this.datosGeneralesToolStripMenuItem3});
             this.uusariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("uusariosToolStripMenuItem.Image")));
             this.uusariosToolStripMenuItem.Name = "uusariosToolStripMenuItem";
             this.uusariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
@@ -447,32 +289,10 @@ namespace CapaPresentacion
             this.datosGeneralesToolStripMenuItem3.Text = "Datos &Generales";
             this.datosGeneralesToolStripMenuItem3.ToolTipText = "Visualizar e imprimir información general de usuarios";
             // 
-            // porEstadoToolStripMenuItem1
-            // 
-            this.porEstadoToolStripMenuItem1.Name = "porEstadoToolStripMenuItem1";
-            this.porEstadoToolStripMenuItem1.Size = new System.Drawing.Size(305, 34);
-            this.porEstadoToolStripMenuItem1.Text = "Por Estado";
-            this.porEstadoToolStripMenuItem1.ToolTipText = "Visualizar e imprimir usuarios por su estado";
-            // 
-            // nombreDeUsuarioToolStripMenuItem
-            // 
-            this.nombreDeUsuarioToolStripMenuItem.Name = "nombreDeUsuarioToolStripMenuItem";
-            this.nombreDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
-            this.nombreDeUsuarioToolStripMenuItem.Text = "Por Nombre de Usuario";
-            this.nombreDeUsuarioToolStripMenuItem.ToolTipText = "Visualizar e imprimir por su nombre de usuario";
-            this.nombreDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nombreDeUsuarioToolStripMenuItem_Click);
-            // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datosGeneralesToolStripMenuItem4,
-            this.porEstadoToolStripMenuItem2,
-            this.porFechaToolStripMenuItem,
-            this.porEmpleadoToolStripMenuItem,
-            this.porClienteToolStripMenuItem,
-            this.porNCFToolStripMenuItem,
-            this.porTipoDeFacturaToolStripMenuItem,
-            this.porCondiciónToolStripMenuItem});
+            this.datosGeneralesToolStripMenuItem4});
             this.ventasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ventasToolStripMenuItem.Image")));
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
@@ -487,55 +307,6 @@ namespace CapaPresentacion
             this.datosGeneralesToolStripMenuItem4.Text = "Datos &Generales";
             this.datosGeneralesToolStripMenuItem4.ToolTipText = "Visualizar e imprimir información general de las Ventas";
             this.datosGeneralesToolStripMenuItem4.Click += new System.EventHandler(this.datosGeneralesToolStripMenuItem4_Click);
-            // 
-            // porEstadoToolStripMenuItem2
-            // 
-            this.porEstadoToolStripMenuItem2.Name = "porEstadoToolStripMenuItem2";
-            this.porEstadoToolStripMenuItem2.Size = new System.Drawing.Size(305, 34);
-            this.porEstadoToolStripMenuItem2.Text = "Por Estado";
-            this.porEstadoToolStripMenuItem2.ToolTipText = "Visualizar e imprimir ventas por su ";
-            // 
-            // porFechaToolStripMenuItem
-            // 
-            this.porFechaToolStripMenuItem.Name = "porFechaToolStripMenuItem";
-            this.porFechaToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
-            this.porFechaToolStripMenuItem.Text = "Por Fecha";
-            this.porFechaToolStripMenuItem.ToolTipText = "Visualizar e imprimir ventas por su fecha";
-            // 
-            // porEmpleadoToolStripMenuItem
-            // 
-            this.porEmpleadoToolStripMenuItem.Name = "porEmpleadoToolStripMenuItem";
-            this.porEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
-            this.porEmpleadoToolStripMenuItem.Text = "Por Empleado";
-            this.porEmpleadoToolStripMenuItem.ToolTipText = "Visualizar e imprimir ventas por el empleado que la ha realizado";
-            // 
-            // porClienteToolStripMenuItem
-            // 
-            this.porClienteToolStripMenuItem.Name = "porClienteToolStripMenuItem";
-            this.porClienteToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
-            this.porClienteToolStripMenuItem.Text = "Por Cliente";
-            this.porClienteToolStripMenuItem.ToolTipText = "Visualizar e imprimir ventas por el cliente comprador";
-            // 
-            // porNCFToolStripMenuItem
-            // 
-            this.porNCFToolStripMenuItem.Name = "porNCFToolStripMenuItem";
-            this.porNCFToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
-            this.porNCFToolStripMenuItem.Text = "Por NCF";
-            this.porNCFToolStripMenuItem.ToolTipText = "Visualizar e imprimir ventas por el NCF";
-            // 
-            // porTipoDeFacturaToolStripMenuItem
-            // 
-            this.porTipoDeFacturaToolStripMenuItem.Name = "porTipoDeFacturaToolStripMenuItem";
-            this.porTipoDeFacturaToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
-            this.porTipoDeFacturaToolStripMenuItem.Text = "Por Tipo de Factura";
-            this.porTipoDeFacturaToolStripMenuItem.ToolTipText = "Visualizar e imprimir ventas por el tipo de factura";
-            // 
-            // porCondiciónToolStripMenuItem
-            // 
-            this.porCondiciónToolStripMenuItem.Name = "porCondiciónToolStripMenuItem";
-            this.porCondiciónToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
-            this.porCondiciónToolStripMenuItem.Text = "Por Condición";
-            this.porCondiciónToolStripMenuItem.ToolTipText = "Visualizar e imprimir ventas por su condición";
             // 
             // facturasToolStripMenuItem
             // 
@@ -593,29 +364,11 @@ namespace CapaPresentacion
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backupToolStripMenuItem,
-            this.restaurarToolStripMenuItem,
             this.cuentasDeUsuariosToolStripMenuItem,
             this.registrarEmpresaToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
             this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(109, 36);
             this.seguridadToolStripMenuItem.Text = "&Seguridad";
-            // 
-            // backupToolStripMenuItem
-            // 
-            this.backupToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("backupToolStripMenuItem.Image")));
-            this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.backupToolStripMenuItem.Text = "Backup";
-            this.backupToolStripMenuItem.ToolTipText = "Copia de seguridad del sistema";
-            // 
-            // restaurarToolStripMenuItem
-            // 
-            this.restaurarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("restaurarToolStripMenuItem.Image")));
-            this.restaurarToolStripMenuItem.Name = "restaurarToolStripMenuItem";
-            this.restaurarToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.restaurarToolStripMenuItem.Text = "Restaurar";
-            this.restaurarToolStripMenuItem.ToolTipText = "Restaurar copia de seguridad";
             // 
             // cuentasDeUsuariosToolStripMenuItem
             // 
@@ -649,7 +402,7 @@ namespace CapaPresentacion
             this.contenidoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("contenidoToolStripMenuItem.Image")));
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
             this.contenidoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.contenidoToolStripMenuItem.Text = "Contenido";
             this.contenidoToolStripMenuItem.ToolTipText = "Mostrar la ayuda del sistema";
             // 
@@ -657,7 +410,7 @@ namespace CapaPresentacion
             // 
             this.acercaDeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaDeToolStripMenuItem.Image")));
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             this.acercaDeToolStripMenuItem.ToolTipText = "Mostrar información sobre el sistema";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
@@ -676,7 +429,7 @@ namespace CapaPresentacion
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(212, 34);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.ToolTipText = "Salir del sistema";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
@@ -763,46 +516,19 @@ namespace CapaPresentacion
         private System.Windows.Forms.ToolStripMenuItem consultasYReportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosGeneralesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porModeloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porMdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porAñoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porTipoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porKilometrajeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porFechaDeIngresoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porPrecioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosGeneralesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem porEstadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porNombreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porDirecciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porTeléfonoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem datosGeneralesToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem porNombreToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem porTelefonoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porTeléfonoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem porFechaDeNacimientoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porRolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uusariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosGeneralesToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem porEstadoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem nombreDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosGeneralesToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem porEstadoToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem porFechaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porNCFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porTipoDeFacturaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porCondiciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utilidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editorDeTextosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem navegadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem restaurarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarEmpresaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;

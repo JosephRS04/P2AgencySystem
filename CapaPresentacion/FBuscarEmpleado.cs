@@ -43,7 +43,7 @@ namespace CapaPresentacion
         private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
         {
             if (DGVDatos.CurrentRow != null)                  //Si el DataGridView no está vacío 
-                indice = DGVDatos.CurrentRow.Index;    //El valor de índice será la fila actual
+                indice = DGVDatos.CurrentRow.Index;     //El valor de índice será la fila actual
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -56,6 +56,9 @@ namespace CapaPresentacion
         {
             if (DGVDatos.CurrentRow != null) //Si el DataGridView no está vacío 
             {
+                //variable global a toda la solución  se hace verdadera y se le asigna a la variable  global vidSuplidor 
+                // el valor de la clave correspondiente 
+
                 Program.modificar = true;
                 Program.vidEmpleado = Convert.ToInt32(DGVDatos.CurrentRow.Cells[0].Value);
             }
@@ -122,6 +125,16 @@ namespace CapaPresentacion
         private void tbBuscar_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DGVDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //si se pulsa en el encabezado, RowIndex será menor que cero y no se hará nada 
+            if (!(e.RowIndex > -1))
+            {
+                return;
+            }
+            bAceptar_Click(sender, e);
         }
 
         private void MostrarDatos()

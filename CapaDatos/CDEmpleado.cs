@@ -168,6 +168,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
+                Console.WriteLine("Error: " + ex.Message);
                 dt = null; //Si ocurre algun error se anula el DataTable 
             }
             return dt;

@@ -47,7 +47,6 @@ namespace CapaPresentacion
             this.label8 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.bBuscar = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bmenu = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
@@ -227,17 +226,6 @@ namespace CapaPresentacion
             this.bBuscar.UseVisualStyleBackColor = true;
             this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.ForeColor = System.Drawing.Color.Coral;
-            this.panel4.Location = new System.Drawing.Point(-147, 863);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2014, 5);
-            this.panel4.TabIndex = 44;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -282,6 +270,7 @@ namespace CapaPresentacion
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // bEditar
             // 
@@ -296,6 +285,7 @@ namespace CapaPresentacion
             this.bEditar.Text = "Editar";
             this.bEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bEditar.UseVisualStyleBackColor = true;
+            this.bEditar.Click += new System.EventHandler(this.bEditar_Click);
             // 
             // bGuardar
             // 
@@ -310,6 +300,7 @@ namespace CapaPresentacion
             this.bGuardar.Text = "Guardar";
             this.bGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bGuardar.UseVisualStyleBackColor = true;
+            this.bGuardar.Click += new System.EventHandler(this.bGuardar_Click);
             // 
             // bAgregar
             // 
@@ -326,6 +317,7 @@ namespace CapaPresentacion
             this.bAgregar.Text = "Agregar";
             this.bAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // toolStrip1
             // 
@@ -412,7 +404,6 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1719, 952);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -469,7 +460,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Button bBuscar;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button bmenu;
         private System.Windows.Forms.Button bCancelar;

@@ -461,6 +461,7 @@ namespace CapaPresentacion
             this.bBuscarEmpleado.Text = "Buscar Empleado";
             this.bBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bBuscarEmpleado.UseVisualStyleBackColor = true;
+            this.bBuscarEmpleado.Click += new System.EventHandler(this.bBuscarEmpleado_Click);
             // 
             // cbTipofactura
             // 

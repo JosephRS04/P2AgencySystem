@@ -33,6 +33,7 @@ namespace CapaPresentacion
             tbIdRol.SelectedIndex = 0;
             string vRol = tbIdRol.Text;
             int vIdRol = Convert.ToInt32(tbIdRol.SelectedValue);
+
             Program.nuevo = false;
             Program.modificar = false;
             HabilitaBotones();

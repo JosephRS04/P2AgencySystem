@@ -90,12 +90,12 @@ namespace CapaDatos
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                micomando.Parameters.AddWithValue("@Nombre", objCliente.Nombre);
-                micomando.Parameters.AddWithValue("@Apellido", objCliente.Apellido);
-                micomando.Parameters.AddWithValue("@Identificacion", objCliente.Identificacion);
-                micomando.Parameters.AddWithValue("@Direccion", objCliente.Direccion);
-                micomando.Parameters.AddWithValue("@Telefono", objCliente.Telefono);
-                micomando.Parameters.AddWithValue("@Estado", objCliente.Estado);
+                micomando.Parameters.AddWithValue("@pnombre", objCliente.Nombre);
+                micomando.Parameters.AddWithValue("@papellido", objCliente.Apellido);
+                micomando.Parameters.AddWithValue("@pidentificacion", objCliente.Identificacion);
+                micomando.Parameters.AddWithValue("@pdireccion", objCliente.Direccion);
+                micomando.Parameters.AddWithValue("@ptelefono", objCliente.Telefono);
+                micomando.Parameters.AddWithValue("@pestado", objCliente.Estado);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente" : "No se pudo insertar los datos";
             }
@@ -126,13 +126,13 @@ namespace CapaDatos
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                micomando.Parameters.AddWithValue("@IdCliente", objCliente.IdCliente);
-                micomando.Parameters.AddWithValue("@Nombre", objCliente.Nombre);
-                micomando.Parameters.AddWithValue("@Apellido", objCliente.Apellido);
-                micomando.Parameters.AddWithValue("@Identificacion", objCliente.Identificacion);
-                micomando.Parameters.AddWithValue("@Direccion", objCliente.Direccion);
-                micomando.Parameters.AddWithValue("@Telefono", objCliente.Telefono);
-                micomando.Parameters.AddWithValue("@Estado", objCliente.Estado);
+                micomando.Parameters.AddWithValue("@pidCliente", objCliente.IdCliente);
+                micomando.Parameters.AddWithValue("@pnombre", objCliente.Nombre);
+                micomando.Parameters.AddWithValue("@papellido", objCliente.Apellido);
+                micomando.Parameters.AddWithValue("@pidentificacion", objCliente.Identificacion);
+                micomando.Parameters.AddWithValue("@pdireccion", objCliente.Direccion);
+                micomando.Parameters.AddWithValue("@ptelefono", objCliente.Telefono);
+                micomando.Parameters.AddWithValue("@pestado", objCliente.Estado);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "actualización de datos completada correctamente" : "No se pudo actualizar los datos";
             }
