@@ -119,6 +119,10 @@ namespace CapaPresentacion
             CNEmpleado cNEmpleado = new CNEmpleado();
             DataTable dt = new DataTable();
             dt = cNEmpleado.ObtenerEmpleado(vparametro);
+            if (dt.Rows.Count <= 0) 
+            {
+                MessageBox.Show("No tiene registros");
+            }
             foreach (DataRow row in dt.Rows)
             {
                 tbIdEmpleado.Text = row["IdEmpleado"].ToString();

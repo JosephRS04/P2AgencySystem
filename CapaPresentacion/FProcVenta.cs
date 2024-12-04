@@ -56,14 +56,16 @@ namespace CapaPresentacion
             {
                 MostrarMercancia();
                 tbCantidad.Focus();
+                tbExistencia.ReadOnly = true;
             }
             else
             {
                 MessageBox.Show("No eligio ninguna mercancia!");
                 bBuscarVehiculo.Focus();
             }
-        }
 
+        }
+        
         private void bBuscarCliente_Click(object sender, EventArgs e)
         {
             FBuscarCliente fbcliente = new FBuscarCliente();

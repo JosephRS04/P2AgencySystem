@@ -353,6 +353,7 @@ namespace CapaPresentacion
             this.tbIdCliente.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIdCliente.Location = new System.Drawing.Point(764, 430);
             this.tbIdCliente.Name = "tbIdCliente";
+            this.tbIdCliente.ReadOnly = true;
             this.tbIdCliente.Size = new System.Drawing.Size(424, 44);
             this.tbIdCliente.TabIndex = 58;
             // 
@@ -429,6 +430,7 @@ namespace CapaPresentacion
             this.tbIdVehiculo.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIdVehiculo.Location = new System.Drawing.Point(765, 145);
             this.tbIdVehiculo.Name = "tbIdVehiculo";
+            this.tbIdVehiculo.ReadOnly = true;
             this.tbIdVehiculo.Size = new System.Drawing.Size(425, 44);
             this.tbIdVehiculo.TabIndex = 83;
             this.tbIdVehiculo.TextChanged += new System.EventHandler(this.tbVehiculo_TextChanged);
@@ -520,6 +522,7 @@ namespace CapaPresentacion
             this.tbCliente.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCliente.Location = new System.Drawing.Point(764, 480);
             this.tbCliente.Name = "tbCliente";
+            this.tbCliente.ReadOnly = true;
             this.tbCliente.Size = new System.Drawing.Size(423, 44);
             this.tbCliente.TabIndex = 93;
             // 
@@ -536,6 +539,7 @@ namespace CapaPresentacion
             this.tbVehiculo.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbVehiculo.Location = new System.Drawing.Point(765, 195);
             this.tbVehiculo.Name = "tbVehiculo";
+            this.tbVehiculo.ReadOnly = true;
             this.tbVehiculo.Size = new System.Drawing.Size(425, 44);
             this.tbVehiculo.TabIndex = 95;
             // 
@@ -614,6 +618,7 @@ namespace CapaPresentacion
             this.tbExistencia.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbExistencia.Location = new System.Drawing.Point(765, 245);
             this.tbExistencia.Name = "tbExistencia";
+            this.tbExistencia.ReadOnly = true;
             this.tbExistencia.Size = new System.Drawing.Size(425, 44);
             this.tbExistencia.TabIndex = 102;
             // 

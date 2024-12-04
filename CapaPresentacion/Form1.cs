@@ -13,7 +13,6 @@ namespace CapaPresentacion
     
     public partial class FMenu : Form
     {
-        public static FMenu Instance { get; private set; }
         private Form currentChildForm;
         Form formVehiculo;
         Form formCliente;
@@ -26,7 +25,7 @@ namespace CapaPresentacion
         public FMenu()
         {
             InitializeComponent();
-            Instance = this;
+            
         }
 
         public void closechildform(Form childform)
@@ -263,6 +262,11 @@ namespace CapaPresentacion
                 formVentaCabecera = new FConsVentaCabecera();
                 openChildForm(formVentaCabecera);
             }
+        }
+
+        private void datosGeneralesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FConsEmpleado());
         }
     }
 }

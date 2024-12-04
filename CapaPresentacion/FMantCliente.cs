@@ -221,11 +221,11 @@ namespace CapaPresentacion
             {
                 if (Program.nuevo)
                 {
-                    mensaje = CNCliente.Insertar(Program.vidVehiculo, tbNombre.Text, tbApellido.Text, tbIdentificacion.Text, tbDireccion.Text, tbTelefono.Text, cbEstado.Text);
+                    mensaje = CNCliente.Insertar(Program.vidCliente, tbNombre.Text, tbApellido.Text, tbIdentificacion.Text, tbDireccion.Text, tbTelefono.Text, cbEstado.Text);
                 }
                 else
                 {
-                    mensaje = CNCliente.Actualizar(Program.vidVehiculo, tbNombre.Text, tbApellido.Text, tbIdentificacion.Text, tbDireccion.Text, tbTelefono.Text, cbEstado.Text);
+                    mensaje = CNCliente.Actualizar(Program.vidCliente, tbNombre.Text, tbApellido.Text, tbIdentificacion.Text, tbDireccion.Text, tbTelefono.Text, cbEstado.Text);
                 }
 
                 MessageBox.Show(mensaje, "Mensage de P2Systems", MessageBoxButtons.OK, MessageBoxIcon.Information);

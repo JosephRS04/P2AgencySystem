@@ -110,6 +110,12 @@
     <Compile Include="FConsCliente.Designer.cs">
       <DependentUpon>FConsCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FConsEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsEmpleado.Designer.cs">
+      <DependentUpon>FConsEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FConsVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     <Compile Include="ReportClientes.Designer.cs">
       <DependentUpon>ReportClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportEmpleados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportEmpleados.Designer.cs">
+      <DependentUpon>ReportEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportVehiculos.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -228,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConsCliente.resx">
       <DependentUpon>FConsCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsEmpleado.resx">
+      <DependentUpon>FConsEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FConsVehiculo.resx">
       <DependentUpon>FConsVehiculo.cs</DependentUpon>
@@ -277,6 +292,9 @@
     </Compile>
     <EmbeddedResource Include="ReportClientes.resx">
       <DependentUpon>ReportClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportEmpleados.resx">
+      <DependentUpon>ReportEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportVehiculos.resx">
       <DependentUpon>ReportVehiculos.cs</DependentUpon>
