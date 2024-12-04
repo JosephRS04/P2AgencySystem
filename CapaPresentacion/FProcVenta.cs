@@ -107,6 +107,7 @@ namespace CapaPresentacion
             else
             {
                 MessageBox.Show("Debe indicar la cantidad vendida!");
+                tbCantidad.Text = "0";
                 tbCantidad.Focus();
             }// fin if cantidad no esta vacio
 
@@ -320,6 +321,7 @@ namespace CapaPresentacion
                 int vNumFactura = ObtenerNumeroRandom();
                 if (Program.nuevo)
                 {
+                    int IdVD = Program.vidVentaDetalle;
                     mensaje = CNVentaDetalle.Insertar(Program.vidVentaDetalle, vNumFactura, Convert.ToInt32(tbIdVehiculo.Text), Convert.ToInt32(tbPrecio.Text), Convert.ToInt32(tbCantidad.Text), tbUnidad.Text);
                     mensaje = CNVentaCabecera.Insertar(Program.vidVentaCabecera, dateTimePickerFecha.Value, Convert.ToInt32(tbIdCliente.Text), Convert.ToInt32(tbIdEmpleado.Text), tbNCF.Text, cbTipofactura.Text, Convert.ToInt32(tbCondicion.Text), cbEstado.Text);
                     SqlConnection mi_conexion = new SqlConnection(miconexion);

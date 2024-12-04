@@ -17,25 +17,6 @@ namespace CapaPresentacion
         public string valorparametro = "", mensaje = "";
         public static double subTotalVenta = 0, itbisVenta = 0, totalVenta = 0;
         CNVentaCabecera objVentaC = new CNVentaCabecera();
-        CNVentaDetalle objVentaD = new CNVentaDetalle();
-
-        private void calcularVenta()
-        {
-                    
-            /*vCantidad = Convert.ToInt32(tbCantidad.Text);
-            vPrecio = Convert.ToDouble(tbPrecio.Text);
-            vExistencia = Convert.ToInt32(tbExistencia.Text);
-
-            subTotalVenta = vPrecio * vCantidad;
-           
-
-            itbisVenta = subTotalVenta * 0.18;
-            
-
-            totalVenta = subTotalVenta - itbisVenta;
-             */
-            
-        }
 
 
         private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
@@ -139,18 +120,12 @@ namespace CapaPresentacion
                 DGVDatos.DataSource = objVentaC.ObtenerVentaCabecera(valorparametro);
                 DGVDatos.Columns[0].Width = 5;   // IdventaCabecera 
                 DGVDatos.Columns[1].Width = 30;  // Fecha 
-                DGVDatos.Columns[2].Width = 5;  // IdVehiculo
-                DGVDatos.Columns[3].Width = 30;  // Vehiculo 
-                DGVDatos.Columns[4].Width = 5;  //  IdCliente
-                DGVDatos.Columns[5].Width = 30;  // Cliente
-                DGVDatos.Columns[6].Width = 5;   // IdEmpleado
-                DGVDatos.Columns[7].Width = 30;  // Empleado
-                DGVDatos.Columns[8].Width = 30;  // NCF
-                DGVDatos.Columns[9].Width = 30;  // TipoFactura 
-                DGVDatos.Columns[10].Width = 30;  // Condicion
-                DGVDatos.Columns[11].Width = 30;  // Precio
-                DGVDatos.Columns[12].Width = 20;  // Cantidad 
-                DGVDatos.Columns[13].Width = 10;  // Estado 
+                DGVDatos.Columns[2].Width = 5;  //  IdCliente
+                DGVDatos.Columns[3].Width = 5;   // IdEmpleado
+                DGVDatos.Columns[4].Width = 30;  // NCF
+                DGVDatos.Columns[5].Width = 30;  // TipoFactura 
+                DGVDatos.Columns[6].Width = 30;  // Condicion
+                DGVDatos.Columns[7].Width = 10;  // Estado 
             }
             else           //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro 
             {

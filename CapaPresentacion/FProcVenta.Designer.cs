@@ -485,8 +485,10 @@ namespace CapaPresentacion
             this.tbUnidad.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUnidad.Location = new System.Drawing.Point(27, 681);
             this.tbUnidad.Name = "tbUnidad";
+            this.tbUnidad.ReadOnly = true;
             this.tbUnidad.Size = new System.Drawing.Size(531, 44);
             this.tbUnidad.TabIndex = 90;
+            this.tbUnidad.Text = "Und";
             this.tbUnidad.TextChanged += new System.EventHandler(this.tbUnidad_TextChanged);
             // 
             // label3

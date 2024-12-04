@@ -13,8 +13,9 @@ namespace CapaPresentacion
 {
     public partial class FConsVentaDetalle : Form
     {
-        public int vidVentaDetalle = 0, vtieneparametro = 0, indice = 1;
+        public int vidVentaDetalle = 0, vtieneparametro = 0, indice = 1, vCantidad;
         public string valorparametro = "", mensaje = "";
+        public static double vPrecio = 0, subTotalVenta = 0, itbisVenta = 0, totalVenta = 0, totalVendido = 0;
         CNVentaDetalle objVentaDetalle = new CNVentaDetalle();
 
         private void FConsVentaDetalle_Load(object sender, EventArgs e)
@@ -123,7 +124,10 @@ namespace CapaPresentacion
         private void MostrarDatos()
         {
             // Se toma el texto que se haya introducido en el textbox para usarlo como parámetro 
-            valorparametro = tbBuscar.Text.Trim();
+            string vparametro = "1";
+            CNVentaDetalle cNVenta = new CNVentaDetalle();
+            DataTable dt = new DataTable();
+            dt = cNVenta.ObtenerVentaDetalle(vparametro);
             //Si el procedimiento almacenado devuelve algún valor se ajusta el ancho de las columnas del DataGridView 
             if (objVentaDetalle.ObtenerVentaDetalle(valorparametro) != null)
             {
@@ -132,20 +136,41 @@ namespace CapaPresentacion
                 DGVDatos.Columns[1].Width = 200;   //NumeroRecibo
                 DGVDatos.Columns[2].Width = 225;  //IdVehiculo
                 DGVDatos.Columns[3].Width = 100;  //Precio
-                DGVDatos.Columns[4].Width = 125;  //Cantidad 
+                DGVDatos.Columns[4].Width = 125;  //Cantidad   
                 DGVDatos.Columns[5].Width = 125;  //Unidad
+                totalVenta = calcularVenta(dt);
+                totalVendido = totalVenta+totalVendido;
             }
             else           //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro 
             {
                 MessageBox.Show("No se retornó ningún valor!");
             }
             DGVDatos.Refresh();       //Se refresca el DataGridView 
-            LCantVentaDetalle.Text = "Cantidad de facturas: " + Convert.ToString(DGVDatos.RowCount);  //Se muestra la cantidad de datos 
+            LCantVentaDetalle.Text = "Cantidad Vendido: " + totalVendido;  //Se muestra la cantidad de datos 
             if (DGVDatos.RowCount <= 0)                                           //Si no se obtienen datos de retorno 
             {
                 MessageBox.Show("Ningún dato que mostrar!");   //Se muestra un mensaje de error 
             }
         }  //Fin del método mostrar
+
+
+        private double calcularVenta(DataTable datos)
+        {
+            double totalVenta = 0;
+
+            foreach (DataRow row in datos.Rows)
+            {
+                double precio = Convert.ToDouble(row["Precio"]);
+                int cantidad = Convert.ToInt32(row["Cantidad"]);
+                double subTotal = precio * cantidad;
+                double itbis = subTotal * 0.18;
+                totalVenta += subTotal - itbis;
+            }
+
+            return totalVenta;
+
+        }
+
 
 
     }
